@@ -22,14 +22,20 @@ public class HurdleController : MonoBehaviour
 
     Coroutine MakeHurdleRoutin; // update함수 동안 장애물을 생성하는 코루틴
     [SerializeField] float makeingTime;
-    [SerializeField] float playerHP;
+    [SerializeField] float playerHp;
 
     // start() 에서 오브젝트 리스트 가져오기 + PlayerController에서 Player의 체력을 가져오기
-    private void Start()
+
+    private void Awake()
     {
         SmallJumpHurdlePool = GameObject.Find("SmallJumpHurdlePool").GetComponent<HurdlePool>().hurdlePools;
         BigJumpHurdlePool = GameObject.Find("BigJumpHurdlePool").GetComponent<HurdlePool>().hurdlePools;
         TopHurdlePool = GameObject.Find("TopHurdlePool").GetComponent<HurdlePool>().hurdlePools;
+        playerHp = GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHp;
+        
+    }
+    private void Start()
+    {
         MakeHurdleRoutin = StartCoroutine(MakeHurdle());
     }
 
@@ -39,7 +45,7 @@ public class HurdleController : MonoBehaviour
         // 일정한 간격(동기)으로 장애물을 랜덤으로 생성
 
         // 플레이어의 체력이 0 이하
-        if (playerHP <= 0)
+        if (playerHp <= 0)
         {
             StopCoroutine(MakeHurdleRoutin); // 장애물 생성 중지
         }
@@ -48,7 +54,7 @@ public class HurdleController : MonoBehaviour
     // Player의 체력이 0이 아니면 계속 장애물 랜덤으로 생성하는 코루틴
     IEnumerator MakeHurdle()
     {
-        while (playerHP > 0)
+        while (playerHp > 0)
         {
             int num = Random.Range(0, 3); // 장애물의 종류를 랜덤으로 생성
             switch (num)
@@ -69,7 +75,7 @@ public class HurdleController : MonoBehaviour
                     break;
             }
             MakeHurdle(nowMakedHurdle, nowMakedHurdlePool);
-            playerHP--;
+            playerHp--;
         }
 
     }
