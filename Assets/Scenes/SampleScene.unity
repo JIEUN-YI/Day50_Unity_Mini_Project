@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85599487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.32, y: -2.34, z: 0}
+  m_LocalPosition: {x: -4, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -259,6 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHp: 10
+  jumpPower: 7
+  jumpCount: 0
+  rb: {fileID: 85599490}
 --- !u!1 &159178179
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerHp: 0
 --- !u!114 &734812074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,8 +688,8 @@ GameObject:
   - component: {fileID: 1188865616}
   - component: {fileID: 1188865618}
   m_Layer: 0
-  m_Name: Ground
-  m_TagString: Ground
+  m_Name: UnderGround
+  m_TagString: UnderGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1004,7 +1006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  playerHp: 0
 --- !u!61 &1930523276
 BoxCollider2D:
   m_ObjectHideFlags: 0
