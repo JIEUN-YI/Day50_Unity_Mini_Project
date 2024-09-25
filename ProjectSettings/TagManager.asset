@@ -7,6 +7,7 @@ TagManager:
   - Hurdle
   - HurdleController
   - Ground
+  - Back
   layers:
   - Default
   - TransparentFX
