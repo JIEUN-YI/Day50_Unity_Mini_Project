@@ -5,9 +5,9 @@ using UnityEngine;
 // Hurdle들의 ObjectPool을 설정하는 기능
 public class HurdlePool : MonoBehaviour
 {
-    // 장애물의 프리팹 종류별로 각 5개씩 가지는 HurdleObj 타입의 리스트를 생성
+    // 장애물의 프리팹 종류별로 각 10개씩 가지는 HurdleObj 타입의 리스트를 생성
     [SerializeField] public List<HurdleObj> hurdlePools = new List<HurdleObj>();
-    private float size = 5;
+    private float size = 10;
     [SerializeField] HurdleObj prefab; // 생성할 프리펩
 
     [Header("HurdleController.cs")]

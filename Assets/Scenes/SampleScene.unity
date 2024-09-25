@@ -804,6 +804,9 @@ MonoBehaviour:
   SmallJumpHurdlePool: []
   BigJumpHurdlePool: []
   TopHurdlePool: []
+  makeingTime: 3
+  playerHP: 10
+  gameSpeed: 3
 --- !u!4 &2125644388
 Transform:
   m_ObjectHideFlags: 0

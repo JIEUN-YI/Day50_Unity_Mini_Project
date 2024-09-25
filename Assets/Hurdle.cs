@@ -10,7 +10,7 @@ public class Hurdle : MonoBehaviour
     private void Update()
     {
     // 2D 형식이므로 Vector2.left 방향으로 속도만큼 이동
-        transform.Translate(Vector2.left * speed *Time.deltaTime, Space.World);
+        transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
     }
 
     // 속도를 장애물의 속도로 설정
