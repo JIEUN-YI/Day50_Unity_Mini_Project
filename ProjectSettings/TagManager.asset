@@ -10,6 +10,9 @@ TagManager:
   - UnderGround
   - TopGround
   - MakingBoundary
+  - Gem
+  - ItemController
+  - DeleteZone
   layers:
   - Default
   - TransparentFX

@@ -1,15 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Rigidbody2D rb;
+
     [SerializeField] public float playerHp;
 
     [SerializeField] float playSpeed;
     [SerializeField] float jumpPower;
     [SerializeField] int jumpCount = 0;
     [SerializeField] float damage;
-
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] float score = 0;
 
     private void Update()
     {
@@ -45,6 +47,9 @@ public class PlayerController : MonoBehaviour
             case "Hurdle": // 장애물과 충돌 시, 체력 감소
                 playerHp -= damage;
                 break;
+            case "Gem": // Gem과 충돌 시, Player의 점수 증가
+                score += 100;
+                break;
         }
     }
 
@@ -75,8 +80,5 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
-    /// <summary>
-    /// 플레이어가 물체와 충돌했을 때
-    /// </summary>
-    /// <param name="collision"></param>
+
 }
