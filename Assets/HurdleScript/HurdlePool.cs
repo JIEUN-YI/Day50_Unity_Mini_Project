@@ -26,6 +26,12 @@ public class HurdlePool : MonoBehaviour
         makePoint = GameObject.FindGameObjectWithTag("HurdleController").GetComponent<HurdleController>().makePoint; // HurdleController의 makePoint 불러오기
     }
 
+    /// <summary>
+    /// 리스트에서 오브젝트를 출력
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="hurdlePool"></param>
+    /// <returns></returns>
     public HurdleObj MakeHurdlePool(Vector2 position, List<HurdleObj> hurdlePool)
     {
     // 리스트의 용량이 0 이상일때 리스트에 저장한 장애물을 출력
@@ -44,7 +50,11 @@ public class HurdlePool : MonoBehaviour
         }
     }
 
-    // 리스트의 반환 함수
+    /// <summary>
+    /// 리스트의 반환 함수
+    /// </summary>
+    /// <param name="hurdle"></param>
+    /// <param name="returnPool"></param>
     public void ReturnHurdlePool(HurdleObj hurdle, List<HurdleObj> returnPool)
     {
         hurdle.gameObject.SetActive (false);

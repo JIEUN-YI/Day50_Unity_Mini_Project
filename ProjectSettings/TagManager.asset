@@ -9,6 +9,7 @@ TagManager:
   - Back
   - UnderGround
   - TopGround
+  - MakingBoundary
   layers:
   - Default
   - TransparentFX
