@@ -24,14 +24,15 @@ public class HurdleObj : MonoBehaviour
         returnPool = GameObject.FindGameObjectWithTag("HurdleController").GetComponent<HurdleController>().nowMakedHurdlePool;
     }
 
-    // 생성한 Hurdle객체가 Ground와 충돌하지 않는 경우 회수 함수 시작
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Ground")
+    // 생성한 Hurdle객체가 DeleteZone 태그의 콜라이더와 충돌한 경우 회수 함수 시작
+        if (collision.collider.tag == "DeleteZone")
         {
             ReturnHurdle(returnObj, returnPool);
         }
     }
+
 
     /// <summary>
     /// 오브젝트 회수 함수 작성
