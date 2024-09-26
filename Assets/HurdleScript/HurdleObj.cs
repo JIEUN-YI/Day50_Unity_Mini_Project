@@ -23,6 +23,7 @@ public class HurdleObj : MonoBehaviour
         returnObj = GameObject.FindGameObjectWithTag("HurdleController").GetComponent<HurdleController>().nowMakedHurdle;
         returnPool = GameObject.FindGameObjectWithTag("HurdleController").GetComponent<HurdleController>().nowMakedHurdlePool;
     }
+
     // 생성한 Hurdle객체가 Ground와 충돌하지 않는 경우 회수 함수 시작
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -32,7 +33,11 @@ public class HurdleObj : MonoBehaviour
         }
     }
 
-    // 회수 함수 작성
+    /// <summary>
+    /// 오브젝트 회수 함수 작성
+    /// </summary>
+    /// <param name="returnHurdleObj"></param>
+    /// <param name="returnHurdlePool"></param>
     public void ReturnHurdle(HurdleObj returnHurdleObj, List<HurdleObj> returnHurdlePool)
     {
         hurdlePool.ReturnHurdlePool(returnHurdleObj, returnHurdlePool);

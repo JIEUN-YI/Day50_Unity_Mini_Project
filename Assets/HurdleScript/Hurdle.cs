@@ -6,11 +6,20 @@ using UnityEngine;
 public class Hurdle : MonoBehaviour
 {
     [SerializeField] float speed; // 모든 장애물의 이동 속도
+    [SerializeField] float playerHp;
 
     private void Update()
     {
-    // 2D 형식이므로 Vector2.left 방향으로 속도만큼 이동
-        transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+        playerHp = GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHp;
+        // 2D 형식이므로 Vector2.left 방향으로 속도만큼 이동
+        if(playerHp > 0)
+        {
+            transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
+        }
+        if(playerHp <= 0)
+        {
+            return;
+        }
     }
 
     // 속도를 장애물의 속도로 설정
