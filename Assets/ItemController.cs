@@ -18,8 +18,6 @@ public class ItemController : MonoBehaviour
     [SerializeField] public List<ItemGemObj> makeItemGemPool;
 
     [Header("Status")]
-    [SerializeField] float playerHp;
-    PlayerController playerController; // PlayerController.cs를 연동하기
     [SerializeField] float makeingTime; // 아이템 생성 시간
 
     [Header("CheckCollision.cs")]
@@ -32,24 +30,19 @@ public class ItemController : MonoBehaviour
     private void Awake()
     {
         makeItemGemPool = GameObject.Find("ItemGemPool").GetComponent<ItemGemPool>().itemGemPools;
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         checkCollision = GameObject.FindGameObjectWithTag("MakingBoundary").GetComponent<CheckCollision>();
     }
 
     private void Start()
     {
-        MakeItemGemRoutin = StartCoroutine(MakeItemGemR());
+        if (GameManager.instance.isGameover == false)
+        {
+            MakeItemGemRoutin = StartCoroutine(MakeItemGemR());
+        }
     }
     private void Update()
     {
-        playerHp = playerController.playerHp;
-
-        /*if (Input.GetKeyDown(KeyCode.S))
-        {
-            nowMakeGem = PositionGem(makeItemGemPool);
-            MakeGem(nowMakeGem, nowMakeGemPool);
-        }*/
-        if (playerHp <= 0)
+        if (GameManager.instance.isGameover == true)
         {
             StopCoroutine(MakeItemGemRoutin);
         }
@@ -57,10 +50,9 @@ public class ItemController : MonoBehaviour
 
     IEnumerator MakeItemGemR()
     {
-        playerHp = playerController.playerHp;
         checkHurdle = checkCollision.checkHurdle;
         checkGem = checkCollision.checkGem;
-        while (playerHp > 0)
+        while (GameManager.instance.isGameover == false)
         {
             if (checkHurdle == false && checkGem == false)
             {

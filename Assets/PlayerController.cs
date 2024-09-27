@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,35 +7,47 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public float playerHp;
 
-    [SerializeField] float playSpeed;
+    [SerializeField] Transform startPlayer;
     [SerializeField] float jumpPower;
     [SerializeField] int jumpCount = 0;
     [SerializeField] float damage;
     [SerializeField] float score = 0;
 
+    public event Action OnDied;
+
+    private void Awake()
+    {
+        startPlayer = gameObject.transform;
+    }
     private void Update()
     {
         playerHp -= Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (jumpCount < 2)
             {
-                if (jumpCount < 2)
-                {
-                    jumpCount++;
-                    Jump();
-                }
-                else if (jumpCount >= 2)
-                {
-                    return;
-                }
+                jumpCount++;
+                Jump();
             }
-            if (Input.GetKey(KeyCode.LeftShift))
+            else if (jumpCount >= 2)
             {
-                Sliding();
+                return;
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                Standing();
-            }
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Sliding();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            Standing();
+        }
+        if (playerHp < 0)
+        {
+            OnDied?.Invoke();
+            GameManager.instance.isGameover = true;
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -76,7 +88,7 @@ public class PlayerController : MonoBehaviour
     private void Standing()
     {
         // 게임오브젝트 원상 복귀
-        transform.position = new Vector2(-4, -2.3f);
+        transform.position = new Vector2(startPlayer.position.x, startPlayer.position.y);
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 

@@ -6,23 +6,16 @@ using UnityEngine;
 public class Hurdle : MonoBehaviour
 {
     [SerializeField] float speed; // 모든 장애물의 이동 속도
-    [SerializeField] float playerHp; 
-    PlayerController playerController; // PlayerController.cs를 연동하기
 
-    private void Awake()
-    {
-        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-    }
 
     private void Update()
     {
-        playerHp = playerController.playerHp;
-        
-        if(playerHp > 0)
+
+        if(GameManager.instance.isGameover == false)
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
         }
-        else if(playerHp <= 0)
+        else if(GameManager.instance.isGameover == true)
         {
             return;
         }

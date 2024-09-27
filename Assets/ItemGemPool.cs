@@ -6,7 +6,7 @@ public class ItemGemPool : MonoBehaviour
 {
     // Gem의 list로 ObjectPool생성
     [SerializeField] public List<ItemGemObj> itemGemPools = new List<ItemGemObj>();
-    private float size = 50;
+    private float size = 20;
     [SerializeField] ItemGemObj gemPrefab; // GemPrefab 설정
     [SerializeField] Transform makeGemPoint; // 고정된 x값을 가져오는 생성 위치 - y값은 랜덤 출력
 
