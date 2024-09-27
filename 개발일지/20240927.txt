@@ -1,0 +1,16 @@
+20240927_개발일지
+
+1. GameManager를 추가
+- GameManager 에서 Gameover여부를 판단하여 게임을 전체적으로 제어할 수 있도록 추가
+- player의 체력에 따라 bool 변수인 isGameover의 상태를 변환
+- isGameover의 상태에 따라 배경, 장애물과 gem의 출력/이동을 제어
+
+--------------------------------------------------------------------------------------------------
+
+1. Hurdle과 Gem의 중복생성 버그를 수정
+2. Gem 아이템의 생성 위치가 Hurdle의 종류에 따라 자연스럽게 이어지게 출력
+3. GameScene를 작성하고 게임의 전체적인 진행을 제어
+   - PlayerController.cs의 playerHp변수가 게임을 진행하는데 필요한 요소로
+     Hurdle과 Item에도 사용되고 있음
+   - 그러나 Player에 속한 변수
+      : 이 변수를 GameScene 혹은 GameManager 에서 전역선언할 것인지 PlayerController에서 선언 후 빼올 것인지
