@@ -49,6 +49,17 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Gem": // Gem과 충돌 시, Player의 점수 증가
+                score += 100;
+                collision.gameObject.SetActive(false);
+                break;
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
@@ -57,10 +68,8 @@ public class PlayerController : MonoBehaviour
                 jumpCount = 0;
                 break;
             case "Hurdle": // 장애물과 충돌 시, 체력 감소
+                Debug.Log("Hurdle과 충돌");
                 playerHp -= damage;
-                break;
-            case "Gem": // Gem과 충돌 시, Player의 점수 증가
-                score += 100;
                 break;
         }
     }

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if(instance == null)   
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         {
             // Scene ¿ÁΩ√¿€
             SceneManager.LoadScene("RunningForever");
+            isGameover = false;
         }
     }
 }
