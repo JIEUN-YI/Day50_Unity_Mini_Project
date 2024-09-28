@@ -38,6 +38,10 @@ public class PatternObj : MonoBehaviour
     /// <param name="returnPatternPool"></param>
     public void ReturnPattern(PatternObj returnPatternObj, List<PatternObj> returnPatternPool)
     {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
         patternPool.ReturnPatternPool(returnPatternObj, returnPatternPool);
     }
 }
