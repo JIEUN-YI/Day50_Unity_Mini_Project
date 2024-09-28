@@ -1,13 +1,15 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb; // Rigidbody 제어
+    [SerializeField] Animator animator; // Animation 제어
+    [SerializeField] SpriteRenderer spriteRenderer; // SpriteRenderer 제어
 
     [SerializeField] public float playerHp;
 
-    [SerializeField] Transform startPlayer;
     [SerializeField] float jumpPower;
     [SerializeField] int jumpCount = 0;
     [SerializeField] float damage;
@@ -15,13 +17,13 @@ public class PlayerController : MonoBehaviour
 
     public event Action OnDied;
 
-    private void Awake()
-    {
-        startPlayer = gameObject.transform;
-    }
+
+
     private void Update()
     {
         playerHp -= Time.deltaTime;
+        animator.SetBool("isGameover", false);
+        animator.SetFloat("isJump", rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (jumpCount < 2)
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             OnDied?.Invoke();
             GameManager.instance.isGameover = true;
-            Destroy(gameObject);
+            animator.SetBool("isGameover", true);
         }
     }
 
@@ -58,6 +60,10 @@ public class PlayerController : MonoBehaviour
                 score += 100;
                 collision.gameObject.SetActive(false);
                 break;
+            case "Pattern": // 장애물과 충돌 시, 체력 감소
+                playerHp -= damage;
+                StartCoroutine(PlayerFlash()); // 깜빡이는 코루틴 실행
+                break;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -65,11 +71,8 @@ public class PlayerController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "UnderGround": // 바닥과 충돌 시, 2단 점프 카운트 리셋
+                animator.SetBool("isRun", true);
                 jumpCount = 0;
-                break;
-            case "Hurdle": // 장애물과 충돌 시, 체력 감소
-                Debug.Log("Hurdle과 충돌");
-                playerHp -= damage;
                 break;
         }
     }
@@ -80,6 +83,7 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        animator.SetFloat("isJump", rb.velocity.y);
     }
 
     /// <summary>
@@ -87,8 +91,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Sliding()
     {
-        // 게임오브젝트 90도 회전
-        transform.rotation = Quaternion.Euler(0, 0, 90);
+        gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4.03f);
+        animator.SetBool("isSliding", true);
     }
 
     /// <summary>
@@ -96,10 +100,22 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Standing()
     {
-        // 게임오브젝트 원상 복귀
-        transform.position = new Vector2(startPlayer.position.x, startPlayer.position.y);
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        gameObject.transform.position = new Vector2(gameObject.transform.position.x, -3.96f);
+        animator.SetBool("isSliding", false);
     }
 
-
+    /// <summary>
+    /// 플레이어의 깜빡임을 구현하는 코루틴
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator PlayerFlash()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
 }
