@@ -1102,7 +1102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8940284010341897157}
   - component: {fileID: 8940284010341897211}
-  - component: {fileID: 8940284010341897210}
   m_Layer: 0
   m_Name: rock-1
   m_TagString: Hurdle
@@ -1177,40 +1176,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!68 &8940284010341897210
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8940284010341897156}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -4.5910544, y: -3.4343271}
-  - {x: -3.6378703, y: -2.4775903}
-  - {x: -3.4746704, y: -1.098582}
-  - {x: -3.2422853, y: -0.70482093}
-  - {x: -1.9444957, y: 0.4957599}
-  - {x: -1.1801968, y: 0.700418}
-  - {x: -0.3097732, y: 2.7423968}
-  - {x: 0.39548874, y: 3.0371192}
-  - {x: 1.0407853, y: 2.8772552}
-  - {x: 1.8187006, y: 0.5879456}
-  - {x: 3.0137951, y: -0.74722147}
-  - {x: 3.2804317, y: -1.0213606}
-  - {x: 3.4008353, y: -2.3732164}
-  - {x: 4.433693, y: -3.3949873}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &8940284010530121697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,7 +2197,7 @@ GameObject:
   - component: {fileID: 54248529401597963}
   - component: {fileID: -2956727034816414380}
   - component: {fileID: 5988057640577972937}
-  - component: {fileID: 6364236787792273146}
+  - component: {fileID: 7043024277476352930}
   m_Layer: 0
   m_Name: Pattern2
   m_TagString: Pattern
@@ -2288,6 +2253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternSpeed: 0
+  GemObject: []
 --- !u!114 &-2956727034816414380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2326,8 +2292,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &6364236787792273146
-BoxCollider2D:
+--- !u!68 &7043024277476352930
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2339,19 +2305,26 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.1110966, y: 3.4301846}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.994902, y: 1.1240897}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.3444133, y: 3.9781246}
+  - {x: -0.45842862, y: 3.0513244}
+  - {x: -0.32479143, y: 1.5352995}
+  - {x: 0.6554332, y: 0.9368248}
+  - {x: 1.9694936, y: -2.410654}
+  - {x: 2.732974, y: -2.6833577}
+  - {x: 3.292032, y: -2.4523578}
+  - {x: 4.016654, y: -0.2756163}
+  - {x: 4.9568224, y: -0.27112085}
+  - {x: 5.5912194, y: 0.9677851}
+  - {x: 6.372772, y: 1.4447318}
+  - {x: 6.641847, y: 2.958865}
+  - {x: 7.611836, y: 3.9593596}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &8940284011502090869
 GameObject:
   m_ObjectHideFlags: 0
