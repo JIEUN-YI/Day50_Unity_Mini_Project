@@ -59,8 +59,6 @@ public class PatternPool : MonoBehaviour
     /// <param name="returnPatternPool"></param>
     public void ReturnPatternPool(PatternObj pattern, List<PatternObj> returnPatternPool)
     {
-        GameObject.FindGameObjectWithTag("Gem").SetActive(true);
-        Debug.Log($"{GameObject.FindGameObjectWithTag("Gem")} Gem의 활성화");
         pattern.gameObject.SetActive (false);
         pattern.transform.parent = makePoint;
         returnPatternPool.Add(pattern);
