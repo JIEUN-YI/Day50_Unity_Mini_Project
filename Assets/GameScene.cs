@@ -1,6 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class GameScene : MonoBehaviour
 {
     // 게임의 상태를 구분하여 진행
@@ -8,13 +9,31 @@ public class GameScene : MonoBehaviour
     public GameState curState;
 
     [SerializeField] private GameObject patternController; // PatternController를 활성화 하기 위한 Object 저장
-    
+    private PlayerController playerController;
+
     [Header("UI")]
     [SerializeField] private GameObject titleText;
     [SerializeField] private GameObject startText;
     [SerializeField] private GameObject gameoverText;
     [SerializeField] private GameObject restartText;
+    [SerializeField] private GameObject scoreText;
+    [SerializeField] private TextMeshProUGUI scoreUI;
+    [SerializeField] private GameObject playerHpUI;
+    [SerializeField] private Slider playerHpSlider;
+    /**/
+    [SerializeField] private GameObject maxScoreText;
+    [SerializeField] private TextMeshProUGUI maxScoreUI;
+    private int maxScore;
 
+    [Header("Status")]
+    [SerializeField] int curScore;
+    [SerializeField] float curPlayerHp;
+    private float maxPlayerHp;
+
+    private void Awake()
+    {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
     private void Start()
     {
         curState = GameState.Ready;
@@ -44,13 +63,18 @@ public class GameScene : MonoBehaviour
         startText.SetActive(true);
         gameoverText.SetActive(false);
         restartText.SetActive(false);
+        scoreText.SetActive(false);
+        SetPlayerHp(playerController.playerHp); // PlayerController.cs에서 playerHp를 사용 설정
+        playerHpUI.SetActive(false);
+        /**/
+        ShowMaxScore();
 
         if (Input.anyKeyDown) // 아무키나 누르면
         {
             GameManager.instance.isGameover = false; // 게임 시작
             patternController.SetActive(true); // PatternController Object를 활성화
             curState = GameState.Running; // 현재 상태를 게임 중으로 변경
-        } 
+        }
     }
 
     private void Running()
@@ -59,8 +83,16 @@ public class GameScene : MonoBehaviour
         startText.SetActive(false);
         gameoverText.SetActive(false);
         restartText.SetActive(false);
+        scoreText.SetActive(true);
+        curScore = (int)playerController.score;
+        scoreUI.text = $"현재 점수 : " + curScore.ToString();
+        curPlayerHp = playerController.playerHp;
+        CheckHp(curPlayerHp);
+        playerHpUI.SetActive(true);
+        /**/
+        ShowMaxScore();
 
-        if( GameManager.instance.isGameover == true ) // 게임이 종료되면
+        if (GameManager.instance.isGameover == true) // 게임이 종료되면
         {
             curState = GameState.Gameover; // 게임 종료 상태로 변경
         }
@@ -72,11 +104,33 @@ public class GameScene : MonoBehaviour
         startText.SetActive(false);
         gameoverText.SetActive(true);
         restartText.SetActive(true);
+        scoreText.SetActive(true);
+        scoreUI.text = $"현재 점수 : {curScore.ToString()}";
+        playerHpUI.SetActive(false);
+        /**/
+        ShowMaxScore();
 
         if (Input.GetKeyDown(KeyCode.R)) // 게임종료 중 R키를 누르면
         {
             GameManager.instance.isGameover = false; // 게임 상태를 시작으로 변경
             SceneManager.LoadScene("RunningForever"); // Scene을 재시작
         }
+    }
+
+    private void SetPlayerHp(float curPlayerHp)
+    {
+        maxPlayerHp = curPlayerHp;
+    }
+
+    private void CheckHp(float curPlayerHp)
+    {
+        playerHpSlider.value = curPlayerHp / maxPlayerHp;
+    }
+    /**/
+    private void ShowMaxScore()
+    {
+        maxScore = GameManager.instance.SetBestScore(curScore); // 최고점수를 저장
+        maxScoreText.SetActive(true);
+        maxScoreUI.text = $"최고 점수 : {maxScore.ToString()}";
     }
 }
