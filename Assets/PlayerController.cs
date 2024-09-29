@@ -14,9 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float damage;
     [SerializeField] public float score;
 
-
     private void Update()
     {
+        animator.SetBool("isStart", false); // 게임시작 전 기본 자세
+
         if (GameManager.instance.isGameover == false) // 게임 시작 중 - 플레이어의 움직임
         {
         playerHp -= Time.deltaTime;
