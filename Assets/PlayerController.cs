@@ -9,21 +9,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer; // SpriteRenderer 제어
 
     [SerializeField] public float playerHp;
-
     [SerializeField] float jumpPower;
     [SerializeField] int jumpCount = 0;
     [SerializeField] float damage;
-    [SerializeField] float score = 0;
-
-    public event Action OnDied;
-
+    [SerializeField] public float score;
 
 
     private void Update()
     {
+        if (GameManager.instance.isGameover == false) // 게임 시작 중 - 플레이어의 움직임
+        {
         playerHp -= Time.deltaTime;
+        score += Time.deltaTime;
+
         animator.SetBool("isGameover", false);
+        animator.SetBool("isStart", true);
         animator.SetFloat("isJump", rb.velocity.y);
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (jumpCount < 2)
@@ -46,9 +48,11 @@ public class PlayerController : MonoBehaviour
         }
         if (playerHp < 0)
         {
-            OnDied?.Invoke();
             GameManager.instance.isGameover = true;
+            animator.SetBool("isStart", false);
             animator.SetBool("isGameover", true);
+        }
+
         }
     }
 
@@ -118,4 +122,5 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
 }
