@@ -1,0 +1,11 @@
+20240929_개발일지
+
+1. GameScene.cs에 상태 패턴 적용 가능 여부를 확인하고 적용
+- GameScene.cs에 상태패턴을 적용하여 전체적인 게임의 진행을 제어
+- GameManager에 전역적으로 선언한 isGameover 변수를 사용하여 게임의 전체적인 진행을 제어
+- PatternCotroller.cs의 진행을 위하여 게임의 시작 전에는 비활성화 된 상태로 게임의 시작 시 활성화
++ 가능하다면 PlayerController.cs의 코드를 다듬기
+
+2. UI의 구성
+- 게임에 진행에 필요한 기초적인 UI Text 구현
+
