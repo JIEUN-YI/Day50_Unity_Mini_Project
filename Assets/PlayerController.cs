@@ -95,6 +95,15 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "UnderGround":
+                animator.SetBool("isRun", false);
+                break;
+        }
+    }
 
     /// <summary>
     /// 플레이어의 점프 구현
@@ -124,25 +133,25 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// 점수에 따른 속도 증가
+    /// 플레이어 점수에 따른 속도 증가
     /// </summary>
     private void SetScore()
     {
-        if (score > 50000)
+        if (score > 35000)
         {
-            GameManager.instance.speed = 10;
-        }
-        else if (score > 30000)
-        {
-            GameManager.instance.speed = 8;
+            Time.timeScale = 2f;
         }
         else if (score > 20000)
         {
-            GameManager.instance.speed = 7;
+            Time.timeScale = 1.8f;
         }
-        else if (score > 10000)
+        else if (score > 15000)
         {
-            GameManager.instance.speed = 5;
+            Time.timeScale = 1.5f;
+        }
+        else if (score > 8000)
+        {
+            Time.timeScale = 1.2f;
         }
     }
 
