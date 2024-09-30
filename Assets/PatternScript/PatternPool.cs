@@ -8,7 +8,7 @@ public class PatternPool : MonoBehaviour
 {
     // Pattern의 종류별로 5개씩 가지는 PatternObj 타입의 list
     [SerializeField] public List<PatternObj> patternPools = new List<PatternObj>();
-    private int size = 5;
+    private int size = 20;
     [SerializeField] PatternObj prefab; // 생성할 패턴 프리팹
 
     [Header("PatternController.cs")]

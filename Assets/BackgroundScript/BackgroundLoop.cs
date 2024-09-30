@@ -11,6 +11,7 @@ public class BackgroundLoop : MonoBehaviour
     {
         BoxCollider2D backgroundCollider = GetComponent<BoxCollider2D>();
         width = backgroundCollider.size.x;
+
     }
 
     // 특정 가로값 이상 이동하면 위치를 재배치
@@ -27,7 +28,9 @@ public class BackgroundLoop : MonoBehaviour
     /// </summary>
     private void Reposition()
     {
-        Vector2 offset = new Vector2(width * 2f, 0);
+        Vector2 offset = new Vector2(width * 1.99f, 0);
+        //Vector2 offset = new Vector2(width*2f, 0);
         transform.position = (Vector2)transform.position + offset;
+        //transform.position = (Vector2)transform.position + offset;
     }
 }
