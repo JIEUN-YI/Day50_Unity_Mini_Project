@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1407531155740398526}
   - component: {fileID: 3948563073061028030}
   - component: {fileID: 3974160572589866516}
-  m_Layer: 0
+  - component: {fileID: 7349640940755967352}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -123,6 +124,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &7349640940755967352
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59828142516282284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &161442041719424181
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +157,8 @@ GameObject:
   - component: {fileID: 3938254238794019472}
   - component: {fileID: 1327386755954698432}
   - component: {fileID: 5295151858408434114}
-  m_Layer: 0
+  - component: {fileID: 1901135097758481480}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -246,6 +269,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &1901135097758481480
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161442041719424181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &247061827505448544
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +302,8 @@ GameObject:
   - component: {fileID: 899874536142646934}
   - component: {fileID: 1967963579775802775}
   - component: {fileID: 7417796551612349357}
-  m_Layer: 0
+  - component: {fileID: 2526219775994127043}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -369,6 +414,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &2526219775994127043
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247061827505448544}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &297988150301943970
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +447,8 @@ GameObject:
   - component: {fileID: 321076357554309610}
   - component: {fileID: 3633065959155761564}
   - component: {fileID: 1465828505857061499}
-  m_Layer: 0
+  - component: {fileID: 5855276746909316106}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -492,6 +559,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &5855276746909316106
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297988150301943970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &340226404313449560
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +592,8 @@ GameObject:
   - component: {fileID: 6351613440414586013}
   - component: {fileID: 6485478270535721237}
   - component: {fileID: 5920870905051871379}
-  m_Layer: 0
+  - component: {fileID: 6739349367914104290}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -615,6 +704,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &6739349367914104290
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340226404313449560}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &760922188043263579
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +737,8 @@ GameObject:
   - component: {fileID: 5925826700072383782}
   - component: {fileID: 2245369890668416413}
   - component: {fileID: 2373903180481200189}
-  m_Layer: 0
+  - component: {fileID: 2850438145687500233}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -738,6 +849,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &2850438145687500233
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760922188043263579}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &877064615040244626
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +882,8 @@ GameObject:
   - component: {fileID: 7464980967138783881}
   - component: {fileID: 6416363581265388791}
   - component: {fileID: 2386506699245628996}
-  m_Layer: 0
+  - component: {fileID: 7485337680699224254}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -861,6 +994,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &7485337680699224254
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877064615040244626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &977526786347686657
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +1027,8 @@ GameObject:
   - component: {fileID: 6886726355204456193}
   - component: {fileID: 3173600669233059835}
   - component: {fileID: 6925768514209122869}
-  m_Layer: 0
+  - component: {fileID: 4842850062270259697}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -984,6 +1139,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &4842850062270259697
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977526786347686657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1157662299555586921
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1172,8 @@ GameObject:
   - component: {fileID: 4158740835768154293}
   - component: {fileID: 117086132499235311}
   - component: {fileID: 2582692084902942964}
-  m_Layer: 0
+  - component: {fileID: 8323749656880218488}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1107,6 +1284,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &8323749656880218488
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157662299555586921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1708441096594603499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1317,8 @@ GameObject:
   - component: {fileID: 2006356587466700890}
   - component: {fileID: 1104704595030134409}
   - component: {fileID: 7899088987903218026}
-  m_Layer: 0
+  - component: {fileID: 8686307021949747906}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1230,6 +1429,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &8686307021949747906
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708441096594603499}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1914397671612399110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1462,8 @@ GameObject:
   - component: {fileID: 471383710687728805}
   - component: {fileID: 5637681574483685424}
   - component: {fileID: 4969515700122925779}
-  m_Layer: 0
+  - component: {fileID: 3750314078603055856}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1353,6 +1574,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &3750314078603055856
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914397671612399110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1920361676852167937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1607,8 @@ GameObject:
   - component: {fileID: 118398438498212856}
   - component: {fileID: 4456240716922950696}
   - component: {fileID: 7734271311349334620}
-  m_Layer: 0
+  - component: {fileID: 2228691289986148436}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1476,6 +1719,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &2228691289986148436
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920361676852167937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2048211147847082644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1752,8 @@ GameObject:
   - component: {fileID: 1492384106853461104}
   - component: {fileID: 4786701815617437171}
   - component: {fileID: 2275070103819687308}
-  m_Layer: 0
+  - component: {fileID: 7644050456286923204}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1599,6 +1864,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &7644050456286923204
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048211147847082644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2337342219193454372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1897,8 @@ GameObject:
   - component: {fileID: 2989933497033568008}
   - component: {fileID: 6888073377861436264}
   - component: {fileID: 2012818562466281327}
-  m_Layer: 0
+  - component: {fileID: 7361644044351595364}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1722,6 +2009,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &7361644044351595364
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337342219193454372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2561223172059726604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +2042,8 @@ GameObject:
   - component: {fileID: 7558686004813897772}
   - component: {fileID: 34208263763922853}
   - component: {fileID: 6119562979015324650}
-  m_Layer: 0
+  - component: {fileID: 8387135177591330461}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1845,6 +2154,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &8387135177591330461
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561223172059726604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2767784606311459478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +2187,8 @@ GameObject:
   - component: {fileID: 941531729157541040}
   - component: {fileID: 8951216031770522837}
   - component: {fileID: 4119731731209114511}
-  m_Layer: 0
+  - component: {fileID: 4031643954363321266}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1968,6 +2299,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &4031643954363321266
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2767784606311459478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3041349847079918452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,7 +2332,8 @@ GameObject:
   - component: {fileID: 5886157754786598064}
   - component: {fileID: 519386059166638822}
   - component: {fileID: 6503317248354625952}
-  m_Layer: 0
+  - component: {fileID: 6719214030951170691}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2091,6 +2444,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &6719214030951170691
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041349847079918452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3070117344174341613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2477,8 @@ GameObject:
   - component: {fileID: 7899127460998375256}
   - component: {fileID: 3646993234301822718}
   - component: {fileID: 6308321751544826532}
-  m_Layer: 0
+  - component: {fileID: 7909696655028180140}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2214,6 +2589,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &7909696655028180140
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3070117344174341613}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3370313914178669658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,7 +2622,8 @@ GameObject:
   - component: {fileID: 3160972682398105877}
   - component: {fileID: 2798282615479057330}
   - component: {fileID: 2845450904090655318}
-  m_Layer: 0
+  - component: {fileID: 667180944224938324}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2337,6 +2734,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &667180944224938324
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370313914178669658}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3437928963028944389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,7 +2767,8 @@ GameObject:
   - component: {fileID: 3152215159799066528}
   - component: {fileID: 996353055889020021}
   - component: {fileID: 2136346070039998976}
-  m_Layer: 0
+  - component: {fileID: 778395168319336021}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2460,6 +2879,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &778395168319336021
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3437928963028944389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3681457110449065319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2912,8 @@ GameObject:
   - component: {fileID: 4689816912681366226}
   - component: {fileID: 1045011609522704509}
   - component: {fileID: 2800996738367286244}
-  m_Layer: 0
+  - component: {fileID: 2962035104963648263}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2583,6 +3024,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &2962035104963648263
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3681457110449065319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3861360455451603917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,7 +3057,8 @@ GameObject:
   - component: {fileID: 3246448556003970357}
   - component: {fileID: 133079260801296874}
   - component: {fileID: 3700630590294392657}
-  m_Layer: 0
+  - component: {fileID: 5367864673512415087}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2706,6 +3169,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &5367864673512415087
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3861360455451603917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4364488231346525014
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +3202,8 @@ GameObject:
   - component: {fileID: 910960694393553357}
   - component: {fileID: 2830081565994260814}
   - component: {fileID: 3854132319721269799}
-  m_Layer: 0
+  - component: {fileID: 1248344942697901505}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2829,6 +3314,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &1248344942697901505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364488231346525014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5036638030254678987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,7 +3347,8 @@ GameObject:
   - component: {fileID: 4049945118611158166}
   - component: {fileID: 8937639573226153415}
   - component: {fileID: 8581434927157156655}
-  m_Layer: 0
+  - component: {fileID: 8213068290557046291}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2952,6 +3459,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &8213068290557046291
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5036638030254678987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5220537134306402385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +3492,8 @@ GameObject:
   - component: {fileID: 4882606018475832140}
   - component: {fileID: 8424646820818544170}
   - component: {fileID: 3145801680903726343}
-  m_Layer: 0
+  - component: {fileID: 1941726341481953557}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3075,6 +3604,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &1941726341481953557
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220537134306402385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6582733776638724563
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +3637,8 @@ GameObject:
   - component: {fileID: 4288486332862095339}
   - component: {fileID: 508036692465169542}
   - component: {fileID: 4839134043536469639}
-  m_Layer: 0
+  - component: {fileID: 9124305555821313842}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3198,6 +3749,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &9124305555821313842
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6582733776638724563}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6593162853136388898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,7 +3782,8 @@ GameObject:
   - component: {fileID: 8933296092891011817}
   - component: {fileID: 8391476945136607077}
   - component: {fileID: 5144434241705579005}
-  m_Layer: 0
+  - component: {fileID: 3255945217836550146}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3321,6 +3894,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &3255945217836550146
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593162853136388898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6960975338199442926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,7 +3927,8 @@ GameObject:
   - component: {fileID: 55537423177172382}
   - component: {fileID: 3585656419438092356}
   - component: {fileID: 5250858133934515631}
-  m_Layer: 0
+  - component: {fileID: 5590362412301509541}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3444,6 +4039,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &5590362412301509541
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960975338199442926}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7651948611967370627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,7 +4072,8 @@ GameObject:
   - component: {fileID: 5731288249455313891}
   - component: {fileID: 4868824186256073927}
   - component: {fileID: 2096122952528710754}
-  m_Layer: 0
+  - component: {fileID: 2135742170798748775}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3567,6 +4184,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &2135742170798748775
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651948611967370627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7929536701484173374
 GameObject:
   m_ObjectHideFlags: 0
@@ -3579,7 +4217,8 @@ GameObject:
   - component: {fileID: 1114096675327691310}
   - component: {fileID: 4948560562734948364}
   - component: {fileID: 5842376922693352662}
-  m_Layer: 0
+  - component: {fileID: 9042188030747439824}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3690,6 +4329,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &9042188030747439824
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929536701484173374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8074665334870397423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,7 +4362,8 @@ GameObject:
   - component: {fileID: 2178601501188901764}
   - component: {fileID: 394849626236402057}
   - component: {fileID: 2172337057804074462}
-  m_Layer: 0
+  - component: {fileID: 8332563233045329141}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -3813,6 +4474,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &8332563233045329141
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074665334870397423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8400968218524188033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,7 +4508,7 @@ GameObject:
   - component: {fileID: 6082783202321616417}
   - component: {fileID: 8987015277386930470}
   - component: {fileID: 3836452070394639150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pattern3
   m_TagString: Pattern
   m_Icon: {fileID: 0}
@@ -3972,7 +4654,8 @@ GameObject:
   - component: {fileID: 6615051207600021808}
   - component: {fileID: 6868593025947479652}
   - component: {fileID: 4971206730038807783}
-  m_Layer: 0
+  - component: {fileID: 2839298631200698638}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -4083,6 +4766,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &2839298631200698638
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8530173888388745837}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8532850831062445656
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,7 +4799,8 @@ GameObject:
   - component: {fileID: 8100189230460533259}
   - component: {fileID: 7848625104096596827}
   - component: {fileID: 8566692903289223557}
-  m_Layer: 0
+  - component: {fileID: 5832067782084255290}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -4206,6 +4911,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &5832067782084255290
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532850831062445656}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8688697874374942439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4218,7 +4944,8 @@ GameObject:
   - component: {fileID: 9119259350049120064}
   - component: {fileID: 2184696492781537697}
   - component: {fileID: 1493500070542773230}
-  m_Layer: 0
+  - component: {fileID: 1098088814052476476}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -4329,6 +5056,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &1098088814052476476
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688697874374942439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8951501057677889608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,7 +5089,8 @@ GameObject:
   - component: {fileID: 3641559802560009105}
   - component: {fileID: 7538036132962736886}
   - component: {fileID: 5917216685751831624}
-  m_Layer: 0
+  - component: {fileID: 6738440770138497678}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -4452,3 +5201,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.46875
+--- !u!95 &6738440770138497678
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951501057677889608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

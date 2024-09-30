@@ -7,13 +7,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb; // Rigidbody 제어
     [SerializeField] Animator animator; // Animation 제어
     [SerializeField] SpriteRenderer spriteRenderer; // SpriteRenderer 제어
+    [SerializeField] AudioSource gemSound; // Gem sound 제어
+    [SerializeField] AudioSource ItemSound; // Gem sound 제어
 
     [SerializeField] public float playerHp;
+    private float maxPlayerHp;
     [SerializeField] float jumpPower;
     [SerializeField] int jumpCount = 0;
     [SerializeField] float damage;
     [SerializeField] public float score;
 
+    private void Awake()
+    {
+        maxPlayerHp = playerHp;
+    }
     private void Update()
     {
         animator.SetBool("isStart", false); // 게임시작 전 기본 자세
@@ -62,12 +69,18 @@ public class PlayerController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Gem": // Gem과 충돌 시, Player의 점수 증가
+                gemSound.Play();
                 score += 100;
                 collision.gameObject.SetActive(false);
                 break;
             case "Pattern": // 장애물과 충돌 시, 체력 감소
                 playerHp -= damage;
                 StartCoroutine(PlayerFlash()); // 깜빡이는 코루틴 실행
+                break;
+            case "Item_Hp": // Item_Hp와 충돌 시, Player의 체력 증가
+                playerHp += maxPlayerHp * 0.3f;
+                ItemSound.Play();
+                collision.gameObject.SetActive(false);
                 break;
         }
     }

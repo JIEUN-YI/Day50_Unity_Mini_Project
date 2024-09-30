@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /**/
     public int SetBestScore(int curScore)
     {
         if(bestScore < curScore)
