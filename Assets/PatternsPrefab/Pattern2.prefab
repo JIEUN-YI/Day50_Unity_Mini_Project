@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5918430505481441618}
   - component: {fileID: 7180347538971632857}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_90 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5652148538127205191}
   - component: {fileID: 2681116411521373777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454491637987128712}
   - component: {fileID: 3037489818721182439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6716489368103400633}
   - component: {fileID: 2410739501728207712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_90 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735909306111123515}
   - component: {fileID: 1231186253232654526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_90 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473056846980881754}
   - component: {fileID: 8833979182506126564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3730091070236597979}
   - component: {fileID: 3884782397734663406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6533807052705423158}
   - component: {fileID: 5736784684932603128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2616193190687183179}
   - component: {fileID: 7322344801280373626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_90 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,8 @@ GameObject:
   - component: {fileID: 7116711830001705815}
   - component: {fileID: 3670600314416368911}
   - component: {fileID: 3609715501876878544}
-  m_Layer: 0
+  - component: {fileID: 5330249153768417296}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -879,6 +880,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &5330249153768417296
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899473424973167424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5404741346662682817
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8778554565606053259}
   - component: {fileID: 2083051238148686676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779887628671126930}
   - component: {fileID: 1360824004253943109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1081,8 @@ GameObject:
   - component: {fileID: 66443953911079922}
   - component: {fileID: 5915192306383556971}
   - component: {fileID: 7557710234112300983}
-  m_Layer: 0
+  - component: {fileID: 8410824417175328960}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1170,6 +1193,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &8410824417175328960
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917826324398161947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7662532783788836746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2669646937659733122}
   - component: {fileID: 1020055622825597430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1264,7 +1308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2478345031401069947}
   - component: {fileID: 6098360981819166717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tileset-sliced_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1348,7 +1392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8940284010341897157}
   - component: {fileID: 8940284010341897211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rock-1
   m_TagString: Hurdle
   m_Icon: {fileID: 0}
@@ -1434,7 +1478,8 @@ GameObject:
   - component: {fileID: 8940284010530121700}
   - component: {fileID: 8940284010530121703}
   - component: {fileID: 6933041146529472937}
-  m_Layer: 0
+  - component: {fileID: 9034275664105756292}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1545,6 +1590,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &9034275664105756292
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940284010530121697}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8940284010709255054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1623,8 @@ GameObject:
   - component: {fileID: 8940284010709255053}
   - component: {fileID: 8940284010709255052}
   - component: {fileID: 4716823567677220413}
-  m_Layer: 0
+  - component: {fileID: 3274419223038880877}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1668,6 +1735,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &3274419223038880877
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940284010709255054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8940284011123673984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,7 +1768,8 @@ GameObject:
   - component: {fileID: 8940284011123673991}
   - component: {fileID: 8940284011123673990}
   - component: {fileID: 8866181453893673095}
-  m_Layer: 0
+  - component: {fileID: 2500257109871146687}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1791,6 +1880,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &2500257109871146687
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940284011123673984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8940284011377840970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1913,8 @@ GameObject:
   - component: {fileID: 8940284011377840969}
   - component: {fileID: 8940284011377840968}
   - component: {fileID: 1621247418733463568}
-  m_Layer: 0
+  - component: {fileID: 4975119401322945712}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1914,6 +2025,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &4975119401322945712
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940284011377840970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8940284011391703247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +2059,7 @@ GameObject:
   - component: {fileID: -2956727034816414380}
   - component: {fileID: 5988057640577972937}
   - component: {fileID: 7043024277476352930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pattern2
   m_TagString: Pattern
   m_Icon: {fileID: 0}
@@ -2066,7 +2198,8 @@ GameObject:
   - component: {fileID: 8940284011502090856}
   - component: {fileID: 8940284011502090859}
   - component: {fileID: 1075928296529824498}
-  m_Layer: 0
+  - component: {fileID: 2056224791478942419}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -2177,3 +2310,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!95 &2056224791478942419
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940284011502090869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

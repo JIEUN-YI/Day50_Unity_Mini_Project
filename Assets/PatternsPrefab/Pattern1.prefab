@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4050733202832601747}
   - component: {fileID: 4992308214573889798}
   - component: {fileID: 2483934304428737798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigHurdle
   m_TagString: Hurdle
   m_Icon: {fileID: 0}
@@ -118,7 +118,8 @@ GameObject:
   - component: {fileID: 2966759822567129861}
   - component: {fileID: 4096555614874384949}
   - component: {fileID: 3466325811120952781}
-  m_Layer: 0
+  - component: {fileID: 1503228260427844154}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -229,6 +230,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &1503228260427844154
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869603693877885477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1963369566509602776
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +263,8 @@ GameObject:
   - component: {fileID: 3340113260076369300}
   - component: {fileID: 8078934360254142043}
   - component: {fileID: 8396068037365759877}
-  m_Layer: 0
+  - component: {fileID: 8684914686838371924}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -352,6 +375,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &8684914686838371924
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963369566509602776}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2205135075449896326
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +407,7 @@ GameObject:
   - component: {fileID: 1914142111287747077}
   - component: {fileID: 2237288271944852094}
   - component: {fileID: 7817725631763178896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigHurdle
   m_TagString: Hurdle
   m_Icon: {fileID: 0}
@@ -470,7 +514,8 @@ GameObject:
   - component: {fileID: 2518841604667460576}
   - component: {fileID: 8649276950980946345}
   - component: {fileID: 2632979253620442388}
-  m_Layer: 0
+  - component: {fileID: 3673146843059918507}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -581,6 +626,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &3673146843059918507
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432308313597796024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3808023888039969143
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +659,8 @@ GameObject:
   - component: {fileID: 4598731240667320198}
   - component: {fileID: 753660794853951992}
   - component: {fileID: 5081564710260798410}
-  m_Layer: 0
+  - component: {fileID: 8990871446997105676}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -704,6 +771,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &8990871446997105676
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808023888039969143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4965500720276435127
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +805,7 @@ GameObject:
   - component: {fileID: -2362300839278866308}
   - component: {fileID: 5192729025844285909}
   - component: {fileID: 3019181770563806313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pattern1
   m_TagString: Pattern
   m_Icon: {fileID: 0}
@@ -839,7 +927,8 @@ GameObject:
   - component: {fileID: 8061142752728121253}
   - component: {fileID: 528155451363696371}
   - component: {fileID: 2921345688736794894}
-  m_Layer: 0
+  - component: {fileID: 3982303305854695201}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -950,6 +1039,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &3982303305854695201
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6883332783944063946}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6927940437784519131
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +1072,8 @@ GameObject:
   - component: {fileID: 3527856092769055376}
   - component: {fileID: 4208921756682327697}
   - component: {fileID: 7001710475750377315}
-  m_Layer: 0
+  - component: {fileID: 8729325071019975616}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1073,6 +1184,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &8729325071019975616
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6927940437784519131}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7979437529250621874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1217,8 @@ GameObject:
   - component: {fileID: 7678644394444970109}
   - component: {fileID: 8441851396808922250}
   - component: {fileID: 8522287324361480}
-  m_Layer: 0
+  - component: {fileID: 4604115927446086742}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1196,6 +1329,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &4604115927446086742
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7979437529250621874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8831855852408295719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,7 +1362,8 @@ GameObject:
   - component: {fileID: 7881156581731259330}
   - component: {fileID: 3834951830298494025}
   - component: {fileID: 6559967017672071351}
-  m_Layer: 0
+  - component: {fileID: 4348225721688788314}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1319,6 +1474,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &4348225721688788314
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831855852408295719}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9193689898500022231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1507,8 @@ GameObject:
   - component: {fileID: 8434905002645486201}
   - component: {fileID: 6055385279654118736}
   - component: {fileID: 6580974341077786742}
-  m_Layer: 0
+  - component: {fileID: 7004425283679581710}
+  m_Layer: 6
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -1442,3 +1619,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!95 &7004425283679581710
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193689898500022231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

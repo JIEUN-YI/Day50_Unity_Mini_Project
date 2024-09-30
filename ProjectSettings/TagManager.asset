@@ -15,16 +15,17 @@ TagManager:
   - Hurdle
   - Gem
   - PatternController
+  - Item_Hp
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Item
+  - Zone
+  - Ground
   - 
   - 
   - 

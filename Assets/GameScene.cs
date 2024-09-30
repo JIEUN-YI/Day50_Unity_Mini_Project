@@ -20,7 +20,6 @@ public class GameScene : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private GameObject playerHpUI;
     [SerializeField] private Slider playerHpSlider;
-    /**/
     [SerializeField] private GameObject maxScoreText;
     [SerializeField] private TextMeshProUGUI maxScoreUI;
     private int maxScore;
@@ -32,7 +31,7 @@ public class GameScene : MonoBehaviour
 
     private void Awake()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        playerController = FindObjectOfType<PlayerController>();
     }
     private void Start()
     {
@@ -66,7 +65,6 @@ public class GameScene : MonoBehaviour
         scoreText.SetActive(false);
         SetPlayerHp(playerController.playerHp); // PlayerController.cs에서 playerHp를 사용 설정
         playerHpUI.SetActive(false);
-        /**/
         ShowMaxScore();
 
         if (Input.anyKeyDown) // 아무키나 누르면
@@ -87,9 +85,8 @@ public class GameScene : MonoBehaviour
         curScore = (int)playerController.score;
         scoreUI.text = $"현재 점수 : " + curScore.ToString();
         curPlayerHp = playerController.playerHp;
-        CheckHp(curPlayerHp);
+        ChangeSliderHp(curPlayerHp);
         playerHpUI.SetActive(true);
-        /**/
         ShowMaxScore();
 
         if (GameManager.instance.isGameover == true) // 게임이 종료되면
@@ -107,7 +104,6 @@ public class GameScene : MonoBehaviour
         scoreText.SetActive(true);
         scoreUI.text = $"현재 점수 : {curScore.ToString()}";
         playerHpUI.SetActive(false);
-        /**/
         ShowMaxScore();
 
         if (Input.GetKeyDown(KeyCode.R)) // 게임종료 중 R키를 누르면
@@ -117,16 +113,25 @@ public class GameScene : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// PlayerController.cs의 playerHp를 가져와서 최대 체력으로 설정하는 함수
+    /// </summary>
+    /// <param name="curPlayerHp"></param>
     private void SetPlayerHp(float curPlayerHp)
     {
         maxPlayerHp = curPlayerHp;
     }
-
-    private void CheckHp(float curPlayerHp)
+    /// <summary>
+    /// Hp Slider의 값을 변경하는 함수
+    /// </summary>
+    /// <param name="curPlayerHp"></param>
+    private void ChangeSliderHp(float curPlayerHp)
     {
         playerHpSlider.value = curPlayerHp / maxPlayerHp;
     }
-    /**/
+    /// <summary>
+    /// 최고 점수 UI를 출력하는 함수
+    /// </summary>
     private void ShowMaxScore()
     {
         maxScore = GameManager.instance.SetBestScore(curScore); // 최고점수를 저장
