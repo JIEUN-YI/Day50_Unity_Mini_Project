@@ -26,10 +26,9 @@ public class PatternController : MonoBehaviour
     [SerializeField] public List<PatternObj> pattern4Pool;
 
     [Header("Status")] // 사용하는 변수
-    [SerializeField] float setSpeed; // 패턴의 이동 속도
     Coroutine MakePatternRoutin; // 패턴을 생성하는 코루틴
     [SerializeField] float makingTime; // 패턴을 생성하는 속도
-
+    int makeNum; // 패턴을 생성하는 랜덤 변수
     private void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -39,7 +38,7 @@ public class PatternController : MonoBehaviour
         pattern3Pool = GameObject.Find("Pattern3Pool").GetComponent<PatternPool>().patternPools;
         pattern4Pool = GameObject.Find("Pattern4Pool").GetComponent<PatternPool>().patternPools;
     }
-    
+
     private void Start()
     {
         curPlayerHp = playerController.playerHp;
@@ -55,7 +54,14 @@ public class PatternController : MonoBehaviour
         curPlayerHp = playerController.playerHp;
         curPlayerHp = Mathf.Min(curPlayerHp, maxPlayerHp);
         checkHp = curPlayerHp / maxPlayerHp;
-
+        if (checkHp >= 0.6f)
+        {
+            makeNum = 4;
+        }
+        else if (checkHp < 0.6f)
+        {
+            makeNum = 5;
+        }
         if (GameManager.instance.isGameover == true)
         {
             // 코루틴 종료
@@ -68,47 +74,52 @@ public class PatternController : MonoBehaviour
     {
         while (GameManager.instance.isGameover == false)
         {
-                // 생성할 패턴의 종류를 랜덤으로 선정
-                int num = Random.Range(0, 5);
-                switch (num)
-                {
-                    case 0:
-                        nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern0Pool);
-                        nowMakePatternPool = pattern0Pool;
-                        yield return new WaitForSeconds(makingTime);
-                        break;
-                    case 1:
-                        nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern1Pool);
-                        nowMakePatternPool = pattern1Pool;
-                        yield return new WaitForSeconds(makingTime);
-                        break;
-                    case 2:
-                        nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern2Pool);
-                        nowMakePatternPool = pattern2Pool;
-                        yield return new WaitForSeconds(makingTime);
-                        break;
-                    case 3:
-                        nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern3Pool);
-                        nowMakePatternPool = pattern3Pool;
-                        yield return new WaitForSeconds(makingTime);
-                        break;
+            // 생성할 패턴의 종류를 랜덤으로 선정
+            int num = Random.Range(0, makeNum);
+            switch (num)
+            {
+                case 0:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern0Pool);
+                    nowMakePatternPool = pattern0Pool;
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 1:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern1Pool);
+                    nowMakePatternPool = pattern1Pool;
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 2:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern2Pool);
+                    nowMakePatternPool = pattern2Pool;
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 3:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern3Pool);
+                    nowMakePatternPool = pattern3Pool;
+                    yield return new WaitForSeconds(makingTime);
+                    break;
                 case 4:
                     nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern4Pool);
                     nowMakePatternPool = pattern4Pool;
                     yield return new WaitForSeconds(makingTime);
                     break;
                 default:
-                        break;
-                }
-                MakePattern(nowMakePattern, nowMakePatternPool);
+                    break;
+            }
+            MakePattern(nowMakePattern, nowMakePatternPool);
         }
     }
 
+    /// <summary>
+    /// 패턴을 출력하는 함수
+    /// </summary>
+    /// <param name="patternObj"></param>
+    /// <param name="patternPool"></param>
     private void MakePattern(PatternObj patternObj, List<PatternObj> patternPool)
     {
         patternObj.gameObject.SetActive(true);
         patternPool.RemoveAt(patternPool.Count - 1);
         Pattern pattern = patternObj.GetComponent<Pattern>();
-        pattern.SetSpeed(setSpeed);
+        pattern.SetSpeed(GameManager.instance.speed);
     }
 }

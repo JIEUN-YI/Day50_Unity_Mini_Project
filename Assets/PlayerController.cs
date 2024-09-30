@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -27,39 +26,41 @@ public class PlayerController : MonoBehaviour
 
         if (GameManager.instance.isGameover == false) // 게임 시작 중 - 플레이어의 움직임
         {
-        playerHp -= Time.deltaTime;
-        score += Time.deltaTime;
+            playerHp -= Time.deltaTime;
+            score += Time.deltaTime;
 
-        animator.SetBool("isGameover", false);
-        animator.SetBool("isStart", true);
-        animator.SetFloat("isJump", rb.velocity.y);
+            animator.SetBool("isGameover", false);
+            animator.SetBool("isStart", true);
+            animator.SetFloat("isJump", rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (jumpCount < 2)
+            SetScore();
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpCount++;
-                Jump();
+                if (jumpCount < 2)
+                {
+                    jumpCount++;
+                    Jump();
+                }
+                else if (jumpCount >= 2)
+                {
+                    return;
+                }
             }
-            else if (jumpCount >= 2)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                return;
+                Sliding();
             }
-        }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            Sliding();
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            Standing();
-        }
-        if (playerHp < 0)
-        {
-            GameManager.instance.isGameover = true;
-            animator.SetBool("isStart", false);
-            animator.SetBool("isGameover", true);
-        }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                Standing();
+            }
+            if (playerHp < 0)
+            {
+                GameManager.instance.isGameover = true;
+                animator.SetBool("isStart", false);
+                animator.SetBool("isGameover", true);
+            }
 
         }
     }
@@ -120,6 +121,29 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.transform.position = new Vector2(gameObject.transform.position.x, -3.96f);
         animator.SetBool("isSliding", false);
+    }
+
+    /// <summary>
+    /// 점수에 따른 속도 증가
+    /// </summary>
+    private void SetScore()
+    {
+        if (score > 50000)
+        {
+            GameManager.instance.speed = 10;
+        }
+        else if (score > 30000)
+        {
+            GameManager.instance.speed = 8;
+        }
+        else if (score > 20000)
+        {
+            GameManager.instance.speed = 7;
+        }
+        else if (score > 10000)
+        {
+            GameManager.instance.speed = 5;
+        }
     }
 
     /// <summary>
