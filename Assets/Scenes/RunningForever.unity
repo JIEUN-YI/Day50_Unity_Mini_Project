@@ -297,7 +297,6 @@ MonoBehaviour:
   pattern2Pool: []
   pattern3Pool: []
   pattern4Pool: []
-  makingTime: 3
 --- !u!4 &9425568
 Transform:
   m_ObjectHideFlags: 0
@@ -4936,7 +4935,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8384,7 +8383,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 26
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

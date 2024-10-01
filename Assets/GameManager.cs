@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 게임의 최고점수를 저장
+    /// </summary>
+    /// <param name="curScore"></param>
+    /// <returns></returns>
     public int SetBestScore(int curScore)
     {
         if(bestScore < curScore)

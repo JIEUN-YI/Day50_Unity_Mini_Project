@@ -28,24 +28,12 @@ public class PlayerController : MonoBehaviour
         {
             playerHp -= Time.deltaTime;
             score += Time.deltaTime;
-
-            animator.SetBool("isGameover", false);
-            animator.SetBool("isStart", true);
-            animator.SetFloat("isJump", rb.velocity.y);
-
+            PlayerSetAnimation();
             SetScore();
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (jumpCount < 2)
-                {
-                    jumpCount++;
-                    Jump();
-                }
-                else if (jumpCount >= 2)
-                {
-                    return;
-                }
+                CheckJumpCount();
             }
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -57,14 +45,16 @@ public class PlayerController : MonoBehaviour
             }
             if (playerHp < 0)
             {
-                GameManager.instance.isGameover = true;
-                animator.SetBool("isStart", false);
-                animator.SetBool("isGameover", true);
+                PlayerDied();
             }
 
         }
     }
 
+    /// <summary>
+    /// 플레이어와의 trigger 충돌을 확인
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
@@ -85,6 +75,11 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    
+    /// <summary>
+    /// 플레이어와의 충돌을 확인
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
@@ -95,6 +90,11 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    
+    /// <summary>
+    /// 플레이어와의 충돌에서 빠져나오는지를 확인
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionExit2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
@@ -106,12 +106,35 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
+    /// 플레이어의 기본 애니메이션 설정
+    /// </summary>
+    private void PlayerSetAnimation()
+    {
+        animator.SetBool("isGameover", false);
+        animator.SetBool("isStart", true);
+        animator.SetFloat("isJump", rb.velocity.y);
+    }
+
+    /// <summary>
     /// 플레이어의 점프 구현
     /// </summary>
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         animator.SetFloat("isJump", rb.velocity.y);
+    }
+
+    private void CheckJumpCount()
+    {
+        if (jumpCount < 2)
+        {
+            jumpCount++;
+            Jump();
+        }
+        else if (jumpCount >= 2)
+        {
+            return;
+        }
     }
 
     /// <summary>
@@ -133,30 +156,39 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// 플레이어 점수에 따른 속도 증가
+    /// 플레이어 사망 함수
     /// </summary>
-    private void SetScore()
+    private void PlayerDied()
     {
-        if (score > 35000)
-        {
-            Time.timeScale = 2f;
-        }
-        else if (score > 20000)
-        {
-            Time.timeScale = 1.8f;
-        }
-        else if (score > 15000)
-        {
-            Time.timeScale = 1.5f;
-        }
-        else if (score > 8000)
-        {
-            Time.timeScale = 1.2f;
-        }
+        GameManager.instance.isGameover = true;
+        animator.SetBool("isStart", false);
+        animator.SetBool("isGameover", true);
     }
 
     /// <summary>
-    /// 플레이어의 깜빡임을 구현하는 코루틴
+    /// 플레이어 점수에 따른 속도 증가
+    /// </summary>
+     private void SetScore()
+     {
+         if (score > 35000)
+         {
+             Time.timeScale = 2f;
+         }
+         else if (score > 20000)
+         {
+             Time.timeScale = 1.8f;
+         }
+         else if (score > 10000)
+         {
+             Time.timeScale = 1.5f;
+         }
+         else if (score > 8000)
+         {
+             Time.timeScale = 1.2f;
+         }
+     }
+    /// <summary>
+    /// 플레이어의 충돌 시 깜빡임을 구현하는 코루틴
     /// </summary>
     /// <returns></returns>
     IEnumerator PlayerFlash()

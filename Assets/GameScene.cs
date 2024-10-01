@@ -12,21 +12,23 @@ public class GameScene : MonoBehaviour
     private PlayerController playerController;
 
     [Header("UI")]
+    // 활성화 여부 선택을 위한 GameObject 변수의 TextUI
     [SerializeField] private GameObject titleText;
     [SerializeField] private GameObject startText;
     [SerializeField] private GameObject gameoverText;
     [SerializeField] private GameObject restartText;
     [SerializeField] private GameObject scoreText;
-    [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private GameObject playerHpUI;
-    [SerializeField] private Slider playerHpSlider;
     [SerializeField] private GameObject maxScoreText;
+    // UI 출력을 위한 UI 변수의 UI 
+    [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private TextMeshProUGUI maxScoreUI;
-    private int maxScore;
+    [SerializeField] private Slider playerHpSlider;
 
     [Header("Status")]
     [SerializeField] int curScore;
     [SerializeField] float curPlayerHp;
+    private int maxScore;
     private float maxPlayerHp;
 
     private void Awake()
