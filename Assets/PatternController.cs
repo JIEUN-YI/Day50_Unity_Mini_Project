@@ -24,10 +24,15 @@ public class PatternController : MonoBehaviour
     [SerializeField] public List<PatternObj> pattern2Pool;
     [SerializeField] public List<PatternObj> pattern3Pool;
     [SerializeField] public List<PatternObj> pattern4Pool;
+    [SerializeField] public List<PatternObj> pattern5Pool;
+    [SerializeField] public List<PatternObj> pattern6Pool;
+    [SerializeField] public List<PatternObj> pattern7Pool;
+    [SerializeField] public List<PatternObj> pattern8Pool;
+    [SerializeField] public List<PatternObj> pattern9Pool;
 
     [Header("Status")] // 사용하는 변수
     Coroutine MakePatternRoutin; // 패턴을 생성하는 코루틴
-    [SerializeField] float makingTime; // 패턴을 생성하는 속도
+    float makingTime; // 패턴을 생성하는 속도
     int makeNum; // 패턴을 생성하는 랜덤 변수
     private void Awake()
     {
@@ -37,11 +42,16 @@ public class PatternController : MonoBehaviour
         pattern2Pool = GameObject.Find("Pattern2Pool").GetComponent<PatternPool>().patternPools;
         pattern3Pool = GameObject.Find("Pattern3Pool").GetComponent<PatternPool>().patternPools;
         pattern4Pool = GameObject.Find("Pattern4Pool").GetComponent<PatternPool>().patternPools;
+        pattern5Pool = GameObject.Find("Pattern5Pool").GetComponent<PatternPool>().patternPools;
+        pattern6Pool = GameObject.Find("Pattern6Pool").GetComponent<PatternPool>().patternPools;
+        pattern7Pool = GameObject.Find("Pattern7Pool").GetComponent<PatternPool>().patternPools;
+        pattern8Pool = GameObject.Find("Pattern8Pool").GetComponent<PatternPool>().patternPools;
+        pattern9Pool = GameObject.Find("Pattern9Pool").GetComponent<PatternPool>().patternPools;
     }
 
     private void Start()
     {
-        makingTime = GameManager.instance.speed;
+        makingTime = 2.72f;
         curPlayerHp = playerController.playerHp;
         maxPlayerHp = curPlayerHp;
         if (GameManager.instance.isGameover == false)
@@ -57,11 +67,11 @@ public class PatternController : MonoBehaviour
         checkHp = curPlayerHp / maxPlayerHp;
         if (checkHp >= 0.6f) // 전체 체력의 60프로 이상이 남은 경우
         {
-            makeNum = 4;
+            makeNum = 7;
         }
         else if (checkHp < 0.6f) // 전체 체력의 60프로 이하가 남은 경우
         {
-            makeNum = 5;
+            makeNum = 10; // 체력포션 랜덤 발생
         }
         if (GameManager.instance.isGameover == true) // 게임이 종료된 경우
         {
@@ -106,6 +116,36 @@ public class PatternController : MonoBehaviour
                 case 4:
                     nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern4Pool);
                     nowMakePatternPool = pattern4Pool;
+                    MakePattern(nowMakePattern, nowMakePatternPool);
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 5:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern5Pool);
+                    nowMakePatternPool = pattern5Pool;
+                    MakePattern(nowMakePattern, nowMakePatternPool);
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 6:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern6Pool);
+                    nowMakePatternPool = pattern6Pool;
+                    MakePattern(nowMakePattern, nowMakePatternPool);
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 7:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern7Pool);
+                    nowMakePatternPool = pattern7Pool;
+                    MakePattern(nowMakePattern, nowMakePatternPool);
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 8:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern8Pool);
+                    nowMakePatternPool = pattern8Pool;
+                    MakePattern(nowMakePattern, nowMakePatternPool);
+                    yield return new WaitForSeconds(makingTime);
+                    break;
+                case 9:
+                    nowMakePattern = patternPool.MakePatternPool(new Vector2(makePoint.position.x, 0), pattern9Pool);
+                    nowMakePatternPool = pattern9Pool;
                     MakePattern(nowMakePattern, nowMakePatternPool);
                     yield return new WaitForSeconds(makingTime);
                     break;

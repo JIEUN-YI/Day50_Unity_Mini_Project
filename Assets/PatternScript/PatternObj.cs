@@ -11,6 +11,12 @@ public class PatternObj : MonoBehaviour
     [SerializeField] public List<PatternObj> pattern1Pool;
     [SerializeField] public List<PatternObj> pattern2Pool;
     [SerializeField] public List<PatternObj> pattern3Pool;
+    [SerializeField] public List<PatternObj> pattern4Pool;
+    [SerializeField] public List<PatternObj> pattern5Pool;
+    [SerializeField] public List<PatternObj> pattern6Pool;
+    [SerializeField] public List<PatternObj> pattern7Pool;
+    [SerializeField] public List<PatternObj> pattern8Pool;
+    [SerializeField] public List<PatternObj> pattern9Pool;
 
     // PatternController에서 현재 사용하는 PatternObj와 그 List<PatternObj>를 반환하기 위해서 return할 list와 object로 받아오도록 선언
     [Header("PatternController.cs")]
@@ -23,13 +29,22 @@ public class PatternObj : MonoBehaviour
         returnPatternPool = GameObject.FindGameObjectWithTag("PatternController").GetComponent<PatternController>().nowMakePatternPool;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "DeleteZone")
         {
-            ReturnPattern(returnPatternObj, returnPatternPool);
+            if (collision.gameObject.tag == "DeleteZone")
+            {
+                ReturnPattern(returnPatternObj, returnPatternPool);
+            }
         }
     }
+    /* private void OnTriggerEnter2D(Collider2D collision)
+     {
+         if (collision.tag == "DeleteZone")
+         {
+             ReturnPattern(returnPatternObj, returnPatternPool);
+         }
+     }*/
 
     /// <summary>
     /// Object를 회수하는 함수
