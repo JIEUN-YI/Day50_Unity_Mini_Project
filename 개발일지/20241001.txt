@@ -7,4 +7,6 @@
 
 2. PlayerController.cs 파일의 정리
 
-3. Bgm과 Animation일부(Gem/Item)가 Time.TimeScale과 연관이 없도록 설정
+3. Animation일부(Gem/Item/Player의 Died)가 Time.TimeScale과 연관이 없도록 설정
+
+4. Player가 Slide하지 않아도 장애물과 부딪히는 판정이 나오지 않는 것 수정

@@ -55,7 +55,6 @@ public class GameScene : MonoBehaviour
             case GameState.Gameover:
                 Gameover();
                 break;
-                /**/
             case GameState.Pause:
                 Pause();
                 break;
@@ -132,7 +131,6 @@ public class GameScene : MonoBehaviour
             SceneManager.LoadScene("RunningForever"); // Scene을 재시작
         }
     }
-    /**/
     private void Pause()
     {
         PauseText.SetActive(true);
