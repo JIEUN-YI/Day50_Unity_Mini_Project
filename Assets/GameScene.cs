@@ -128,6 +128,7 @@ public class GameScene : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) // 게임종료 중 R키를 누르면
         {
             GameManager.instance.isGameover = false; // 게임 상태를 시작으로 변경
+            Time.timeScale = 1f;
             SceneManager.LoadScene("RunningForever"); // Scene을 재시작
         }
     }
