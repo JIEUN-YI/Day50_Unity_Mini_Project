@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class GameScene : MonoBehaviour
 {
     // 게임의 상태를 구분하여 진행
-    public enum GameState { Ready, Running, Gameover }
+    public enum GameState { Ready, Running, Gameover, Pause }
+    //public enum GameState { Ready, Running, Gameover }
     public GameState curState;
 
     [SerializeField] private GameObject patternController; // PatternController를 활성화 하기 위한 Object 저장
@@ -20,6 +21,8 @@ public class GameScene : MonoBehaviour
     [SerializeField] private GameObject scoreText;
     [SerializeField] private GameObject playerHpUI;
     [SerializeField] private GameObject maxScoreText;
+    [SerializeField] private GameObject PauseText;
+    [SerializeField] private GameObject UnpauseText;
     // UI 출력을 위한 UI 변수의 UI 
     [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private TextMeshProUGUI maxScoreUI;
@@ -52,6 +55,10 @@ public class GameScene : MonoBehaviour
             case GameState.Gameover:
                 Gameover();
                 break;
+                /**/
+            case GameState.Pause:
+                Pause();
+                break;
             default:
                 break;
         }
@@ -68,6 +75,8 @@ public class GameScene : MonoBehaviour
         SetPlayerHp(playerController.playerHp); // PlayerController.cs에서 playerHp를 사용 설정
         playerHpUI.SetActive(false);
         ShowMaxScore();
+        PauseText.SetActive(false);
+        UnpauseText.SetActive(false);
 
         if (Input.anyKeyDown) // 아무키나 누르면
         {
@@ -90,6 +99,13 @@ public class GameScene : MonoBehaviour
         ChangeSliderHp(curPlayerHp);
         playerHpUI.SetActive(true);
         ShowMaxScore();
+        PauseText.SetActive(false);
+        UnpauseText.SetActive(false);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            curState = GameState.Pause;
+        }
 
         if (GameManager.instance.isGameover == true) // 게임이 종료되면
         {
@@ -107,6 +123,8 @@ public class GameScene : MonoBehaviour
         scoreUI.text = $"현재 점수 : {curScore.ToString()}";
         playerHpUI.SetActive(false);
         ShowMaxScore();
+        PauseText.SetActive(false);
+        UnpauseText.SetActive(false);
 
         if (Input.GetKeyDown(KeyCode.R)) // 게임종료 중 R키를 누르면
         {
@@ -114,7 +132,18 @@ public class GameScene : MonoBehaviour
             SceneManager.LoadScene("RunningForever"); // Scene을 재시작
         }
     }
-
+    /**/
+    private void Pause()
+    {
+        PauseText.SetActive(true);
+        UnpauseText.SetActive(true);
+        Time.timeScale = 0; // 일시정지
+        if (Input.anyKeyDown)
+        {
+            Time.timeScale = 1;
+            curState = GameState.Running;
+        }
+    }
     /// <summary>
     /// PlayerController.cs의 playerHp를 가져와서 최대 체력으로 설정하는 함수
     /// </summary>
