@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private float maxPlayerHp;
     private float jumpPower = 8;
     private int jumpCount = 0;
+   [SerializeField] private int clashCount = 0; // 같은 장애물에 동시 충돌하지 않도록 카운팅 - 장애물에서 벗어나면 카운트 0
     private float damage = 10;
     [SerializeField] public float score;
     private float hpReduceSpeed; // 체력 감소 속도
@@ -68,14 +69,27 @@ public class PlayerController : MonoBehaviour
                 score += 100;
                 collision.gameObject.SetActive(false);
                 break;
-            case "Pattern": // 장애물과 충돌 시, 체력 감소
-                playerHp -= damage;
+            case "Hurdle": // 장애물과 충돌 시, 체력 감소
+                if (clashCount <= 0)
+                {
+                    playerHp -= damage; // 한 오브젝트와 2번 이상 동시 충돌 x
+                    clashCount++;
+                }
                 StartCoroutine(PlayerFlash()); // 깜빡이는 코루틴 실행
                 break;
             case "Item_Hp": // Item_Hp와 충돌 시, Player의 체력 증가
                 playerHp += maxPlayerHp * 0.3f;
                 ItemSound.Play();
                 collision.gameObject.SetActive(false);
+                break;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Hurdle": // 장애물과 충돌에서 빠져나와
+                clashCount = 0; // 카운트 초기화
                 break;
         }
     }
@@ -91,6 +105,9 @@ public class PlayerController : MonoBehaviour
             case "UnderGround": // 바닥과 충돌 시, 2단 점프 카운트 리셋
                 animator.SetBool("isRun", true);
                 jumpCount = 0;
+                break;
+            case "DeadZone": // DeadZone에 충돌 시, 플레이어 체력 0
+                playerHp = 0;
                 break;
         }
     }

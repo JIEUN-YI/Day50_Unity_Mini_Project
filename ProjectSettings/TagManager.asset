@@ -4,18 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HurdleController
   - Back
   - UnderGround
   - TopGround
-  - MakingBoundary
-  - ItemController
   - DeleteZone
   - Pattern
   - Hurdle
   - Gem
   - PatternController
   - Item_Hp
+  - DeadZone
   layers:
   - Default
   - TransparentFX
