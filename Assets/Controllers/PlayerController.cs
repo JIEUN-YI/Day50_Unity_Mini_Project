@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEditor.Timeline.Actions;
+//using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -215,25 +215,25 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void SetScore()
     {
-        if (score > 5000)
+        if (score > 45000)
         {
             animator.SetFloat("DeadSpeed", 0.2f);
             Time.timeScale = 2f;
             hpReduceSpeed = 2f;
         }
-        else if (score > 4000)
+        else if (score > 20000)
         {
             animator.SetFloat("DeadSpeed", 0.4f);
             Time.timeScale = 1.8f;
             hpReduceSpeed = 1.8f;
         }
-        else if (score > 3000)
+        else if (score > 10000)
         {
             animator.SetFloat("DeadSpeed", 0.6f);
             Time.timeScale = 1.5f;
             hpReduceSpeed = 1.4f;
         }
-        else if (score > 2000)
+        else if (score > 4000)
         {
             animator.SetFloat("DeadSpeed", 0.8f);
             Time.timeScale = 1.2f;

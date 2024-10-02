@@ -131,6 +131,10 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1f;
             SceneManager.LoadScene("RunningForever"); // Scene을 재시작
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     private void Pause()
     {
@@ -142,6 +146,7 @@ public class GameController : MonoBehaviour
             Time.timeScale = 1;
             curState = GameState.Running;
         }
+
     }
     /// <summary>
     /// PlayerController.cs의 playerHp를 가져와서 최대 체력으로 설정하는 함수
