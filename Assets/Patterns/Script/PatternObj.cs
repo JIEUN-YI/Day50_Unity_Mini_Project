@@ -38,13 +38,6 @@ public class PatternObj : MonoBehaviour
             }
         }
     }
-    /* private void OnTriggerEnter2D(Collider2D collision)
-     {
-         if (collision.tag == "DeleteZone")
-         {
-             ReturnPattern(returnPatternObj, returnPatternPool);
-         }
-     }*/
 
     /// <summary>
     /// Object를 회수하는 함수

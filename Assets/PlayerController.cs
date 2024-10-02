@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case "Item_Hp": // Item_Hp와 충돌 시, Player의 체력 증가
                 playerHp += maxPlayerHp * 0.3f;
+                playerHp = Mathf.Min(playerHp, maxPlayerHp); // 최대체력을 넘어서지 않도록
                 ItemSound.Play();
                 collision.gameObject.SetActive(false);
                 break;
