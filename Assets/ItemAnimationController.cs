@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class ItemAnimationController : MonoBehaviour
 {
     [SerializeField] Animator animator; // Animation Á¦¾î
     [SerializeField] PlayerController playerController;
@@ -11,26 +11,22 @@ public class AnimationController : MonoBehaviour
         animator = GetComponent<Animator>();
         playerController = FindAnyObjectByType<PlayerController>();
     }
-    private void Start()
-    {
-
-    }
     private void Update()
     {
         score = playerController.score;
-        if (score > 35000)
+        if (score > 5000)
         {
             animator.speed = 0.2f;
         }
-        else if (score > 20000)
+        else if (score > 4000)
         {
             animator.speed = 0.4f;
         }
-        else if (score > 10000)
+        else if (score > 3000)
         {
             animator.speed = 0.6f;
         }
-        else if (score > 8000)
+        else if (score > 2000)
         {
             animator.speed = 0.8f;
         }

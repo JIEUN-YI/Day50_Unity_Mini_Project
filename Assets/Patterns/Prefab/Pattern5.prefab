@@ -1489,6 +1489,7 @@ GameObject:
   - component: {fileID: 7469941621893004072}
   - component: {fileID: 7297894181618550003}
   - component: {fileID: 8713414902427216997}
+  - component: {fileID: 3420025306986601456}
   m_Layer: 8
   m_Name: UnderGround
   m_TagString: UnderGround
@@ -1592,6 +1593,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!61 &3420025306986601456
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3699251297238816003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.9839368, y: -5.6191015}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.4877186, y: 1.3358555}
+  m_EdgeRadius: 0
 --- !u!1 &4029306472747743726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2197,7 @@ MonoBehaviour:
   pattern6Pool: []
   pattern7Pool: []
   pattern8Pool: []
+  pattern9Pool: []
 --- !u!50 &5876842783932681928
 Rigidbody2D:
   serializedVersion: 4
