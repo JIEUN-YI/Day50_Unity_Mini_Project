@@ -8,14 +8,14 @@
 
 ## 게임 진행 방식
 
-#### 1. 게임 시작
+### 1. 게임 시작
 
 ![게임시작](https://github.com/user-attachments/assets/b177afd1-eb05-41f6-add4-8c882e1f17a2)
 
 - 게임 시작 화면에서 아무 키나 입력하면 게임이 시작된다.
 - 게임 시작 화면에서는 지난 게임의 최고 점수가 보여진다.
 
-#### 2. 게임 진행
+### 2. 게임 진행
 
   ![게임 화면](https://github.com/user-attachments/assets/b1f165ce-30d5-49b9-bbef-0f662b377b43)
   ![image](https://github.com/user-attachments/assets/97d44b24-05a5-40da-80a3-405f70415e64)
@@ -33,14 +33,14 @@
 
 - 게임을 진행하여 현재 점수가 올라갈수록 게임의 속도가 증가한다.
 
-#### 3. 게임 일시정지
+### 3. 게임 일시정지
 
 ![image](https://github.com/user-attachments/assets/d99835c2-8d6d-4b85-8840-7c8422abfe20)
 
 - 게임 진행화면에서 ESC키를 눌러서 게임을 일시정지 할 수 있다.
 - 아무 키나 입력하면 게임 플레이 화면으로 돌아갈 수 있다.
 
-#### 4. 게임 종료
+### 4. 게임 종료
 
 ![image](https://github.com/user-attachments/assets/02e84743-59d7-4f26-80ee-f51ad924f80e)
 
