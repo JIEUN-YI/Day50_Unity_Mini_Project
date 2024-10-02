@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,16 +10,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer; // SpriteRenderer 제어
     [SerializeField] AudioSource gemSound; // Gem sound 제어
     [SerializeField] AudioSource ItemSound; // Gem sound 제어
+    [SerializeField] GameObject invinciblityBarrier;
 
     [Header("Status")]
     [SerializeField] public float playerHp;
     private float maxPlayerHp;
     private float jumpPower = 8;
     private int jumpCount = 0;
-   [SerializeField] private int clashCount = 0; // 같은 장애물에 동시 충돌하지 않도록 카운팅 - 장애물에서 벗어나면 카운트 0
+    [SerializeField] private int clashCount = 0; // 같은 장애물에 동시 충돌하지 않도록 카운팅 - 장애물에서 벗어나면 카운트 0
     private float damage = 10;
     [SerializeField] public float score;
     private float hpReduceSpeed; // 체력 감소 속도
+
+    [Header("Status")]
+    Coroutine PlayerFlashR;
+    Coroutine PlayerFloatUpR;
+    Coroutine InvinciblityR;
 
     private void Awake()
     {
@@ -106,8 +113,22 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isRun", true);
                 jumpCount = 0;
                 break;
-            case "DeadZone": // DeadZone에 충돌 시, 플레이어 체력 0
-                playerHp = 0;
+            case "DeadZone": // 추락하여 DeadZone에 충돌 시, 플레이어 체력 0
+                // playerHp = 0;
+                playerHp -= maxPlayerHp * 0.3f;
+                PlayerFloatUpR = StartCoroutine(PlayerFloatUp());
+                PlayerFlashR = StartCoroutine(PlayerFlash());
+                InvinciblityR = StartCoroutine(Invinciblity());
+
+                if (playerHp <= 0)
+                {
+                    StopCoroutine(PlayerFloatUpR);
+                    StopCoroutine(PlayerFlashR);
+                    StopCoroutine(InvinciblityR); 
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4);
+                    spriteRenderer.color = new Color(1, 1, 1, 1);
+                    invinciblityBarrier.SetActive(false);
+                }
                 break;
         }
     }
@@ -191,19 +212,19 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void SetScore()
     {
-        if (score > 10000)
+        if (score > 5000)
         {
             animator.SetFloat("DeadSpeed", 0.2f);
             Time.timeScale = 2f;
             hpReduceSpeed = 2f;
         }
-        else if (score > 8000)
+        else if (score > 4000)
         {
             animator.SetFloat("DeadSpeed", 0.4f);
             Time.timeScale = 1.8f;
             hpReduceSpeed = 1.8f;
         }
-        else if (score > 5000)
+        else if (score > 3000)
         {
             animator.SetFloat("DeadSpeed", 0.6f);
             Time.timeScale = 1.5f;
@@ -230,5 +251,26 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-
+    /// <summary>
+    /// 바닥 추락 시 위로 올라왔다가 다시 진행하는 코루틴
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator PlayerFloatUp()
+    {
+        gameObject.transform.Translate(0, 5, 0, Space.World);
+        yield return new WaitForSeconds(3f);
+        gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4);
+    }
+    /// <summary>
+    /// 플레이어의 무적 상태 코루틴
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator Invinciblity()
+    {
+        this.gameObject.layer = 9;
+        invinciblityBarrier.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        this.gameObject.layer = 3;
+        invinciblityBarrier.SetActive(false);
+    }
 }
