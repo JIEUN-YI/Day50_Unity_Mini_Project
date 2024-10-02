@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389057390554743221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.0622, y: -4.5, z: 0}
+  m_LocalScale: {x: 1.1244, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 946477351296241688}
@@ -1512,6 +1512,10 @@ MonoBehaviour:
   pattern3Pool: []
   pattern4Pool: []
   pattern5Pool: []
+  pattern6Pool: []
+  pattern7Pool: []
+  pattern8Pool: []
+  pattern9Pool: []
 --- !u!50 &5876842783932681928
 Rigidbody2D:
   serializedVersion: 4
@@ -1572,7 +1576,6 @@ GameObject:
   - component: {fileID: 5876842783987458525}
   - component: {fileID: 5876842783987458524}
   - component: {fileID: 5876842783987458523}
-  - component: {fileID: 5744819080486602727}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -1696,7 +1699,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1705,21 +1708,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5744819080486602727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842783987458521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842784595407516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1721,6 @@ GameObject:
   - component: {fileID: 5876842784595407488}
   - component: {fileID: 5876842784595407519}
   - component: {fileID: 5876842784595407518}
-  - component: {fileID: 5007561765014997855}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -1857,7 +1844,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1866,21 +1853,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5007561765014997855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842784595407516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842784893910330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1866,6 @@ GameObject:
   - component: {fileID: 5876842784893910334}
   - component: {fileID: 5876842784893910333}
   - component: {fileID: 5876842784893910332}
-  - component: {fileID: 1967565168645785788}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -2018,7 +1989,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2027,21 +1998,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1967565168645785788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842784893910330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842785325935223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2011,6 @@ GameObject:
   - component: {fileID: 5876842785325935227}
   - component: {fileID: 5876842785325935226}
   - component: {fileID: 5876842785325935225}
-  - component: {fileID: 8121314156767773949}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -2179,7 +2134,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2188,21 +2143,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8121314156767773949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842785325935223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842785672584111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,7 +2156,6 @@ GameObject:
   - component: {fileID: 5876842785672584083}
   - component: {fileID: 5876842785672584082}
   - component: {fileID: 5876842785672584081}
-  - component: {fileID: 3579423613184546068}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -2340,7 +2279,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2349,21 +2288,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3579423613184546068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842785672584111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842785804645403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,7 +2301,6 @@ GameObject:
   - component: {fileID: 5876842785804645407}
   - component: {fileID: 5876842785804645406}
   - component: {fileID: 5876842785804645405}
-  - component: {fileID: 4274093133977528644}
   m_Layer: 8
   m_Name: Gem
   m_TagString: Gem
@@ -2501,7 +2424,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2fa88d3e1d1db1544892a2c912e85c46, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2510,21 +2433,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4274093133977528644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842785804645403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &5876842785873762309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2446,6 @@ GameObject:
   - component: {fileID: 5876842785873762311}
   - component: {fileID: 5201302280933131742}
   - component: {fileID: 4160230916971260976}
-  - component: {fileID: 4533599972408993643}
   m_Layer: 8
   m_Name: Item_Hp
   m_TagString: Item_Hp
@@ -2625,7 +2532,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 91fdab63dec164c4e8adb061052ec2f9, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2671,21 +2578,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &4533599972408993643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876842785873762309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb233d5636f5dfa4ab74d43ef090b607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  playerController: {fileID: 0}
-  score: 0
 --- !u!1 &6264841185631105119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,8 +3066,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8951024192205306267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.0871, y: 4.5, z: 0}
+  m_LocalScale: {x: 1.1742, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 738240650499906798}
@@ -3258,8 +3150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8976412959872305671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.0871, y: 4.5, z: 0}
+  m_LocalScale: {x: 1.1742, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 738240650499906798}
@@ -3342,8 +3234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9219794040514396594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.0684, y: -4.5, z: 0}
+  m_LocalScale: {x: 1.1368, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 946477351296241688}

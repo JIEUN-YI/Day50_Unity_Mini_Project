@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class GameScene : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     // 게임의 상태를 구분하여 진행
     public enum GameState { Ready, Running, Gameover, Pause }

@@ -209,7 +209,9 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// 플레이어 점수에 따른 속도 증가
+    /// 플레이어 점수에 따른 
+    /// 속도 증가
+    /// 체력 감소폭 증가
     /// </summary>
     private void SetScore()
     {
@@ -260,7 +262,6 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.transform.Translate(0, 5, 0, Space.World);
         yield return new WaitForSeconds(3f);
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4);
     }
     /// <summary>
     /// 플레이어의 무적 상태 코루틴
