@@ -3,7 +3,8 @@
 1. 게임 이름 : Running Forever
 2. 게임 장르 : 플랫포머, 러닝 게임
 3. 레퍼런스 게임 : 쿠키런
-4. 개획 계발 링크 : https://codingloading.tistory.com/66
+4. 게임 이용 폰트 : 넥슨_메이플스토리체
+5. 개획 계발 링크 : https://codingloading.tistory.com/66
                    - 비밀번호 : KGA
 
 ## 게임 진행 방식
