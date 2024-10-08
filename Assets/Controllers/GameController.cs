@@ -141,10 +141,14 @@ public class GameController : MonoBehaviour
         PauseText.SetActive(true);
         UnpauseText.SetActive(true);
         Time.timeScale = 0; // 일시정지
-        if (Input.anyKeyDown)
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Time.timeScale = 1;
             curState = GameState.Running;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 
     }
