@@ -9,12 +9,12 @@ public class Pattern : MonoBehaviour
     private void Update()
     {
         // 게임 진행 시
-        if(GameManager.instance.isGameover == false)
+        if(GameManager.Instance.IsGameOver == false)
         {
             transform.Translate(Vector2.left * patternSpeed * Time.deltaTime, Space.World);
         }
         // 게임 종료 시
-        else if(GameManager.instance.isGameover == true)
+        else if(GameManager.Instance.IsGameOver == true)
         {
             return;
         }

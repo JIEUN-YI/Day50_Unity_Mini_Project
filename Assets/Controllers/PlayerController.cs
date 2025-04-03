@@ -1,28 +1,24 @@
 using System.Collections;
-//using UnityEditor.Timeline.Actions;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Controller)")]
-    [SerializeField] Rigidbody2D rb; // Rigidbody 제어
-    [SerializeField] Animator animator; // Animation 제어
-    [SerializeField] SpriteRenderer spriteRenderer; // SpriteRenderer 제어
-    [SerializeField] AudioSource gemSound; // Gem sound 제어
-    [SerializeField] AudioSource ItemSound; // Gem sound 제어
-    [SerializeField] GameObject invinciblityBarrier;
+    Rigidbody2D rb; // Rigidbody 제어
+    PlayerUIViewer viewer;
 
-    [Header("Status")]
-    [SerializeField] public float playerHp;
+    private float playerHp = 100;
+    public float PlayerHp { get { return playerHp; } set { playerHp = value; } }
     private float maxPlayerHp;
     private float jumpPower = 8;
     private int jumpCount = 0;
-    [SerializeField] private int clashCount = 0; // 같은 장애물에 동시 충돌하지 않도록 카운팅 - 장애물에서 벗어나면 카운트 0
-    private float damage = 10;
-    [SerializeField] public float score;
+    private int clashCount = 0; // 같은 장애물에 동시 충돌하지 않도록 카운팅 - 장애물에서 벗어나면 카운트 0
+    private int damage = 10;
+    private float score;
+    public float Score { get { return score; } set { score = value; } }
+
     private float hpReduceSpeed; // 체력 감소 속도
 
-    [Header("Status")]
     Coroutine PlayerFlashR;
     Coroutine PlayerFloatUpR;
     Coroutine InvinciblityR;
@@ -31,16 +27,15 @@ public class PlayerController : MonoBehaviour
     {
         maxPlayerHp = playerHp;
         hpReduceSpeed = 1;
+        rb = GetComponent<Rigidbody2D>();
+        viewer = GetComponent<PlayerUIViewer>();
     }
     private void Update()
     {
-        animator.SetBool("isStart", false); // 게임시작 전 기본 자세
-
-        if (GameManager.instance.isGameover == false) // 게임 시작 중 - 플레이어의 움직임
+        if (GameManager.Instance.IsGameOver == false) // 게임 시작 중 - 플레이어의 움직임
         {
             playerHp -= hpReduceSpeed * Time.deltaTime;
-            score += Time.deltaTime;
-            PlayerSetAnimation();
+            Score += Time.deltaTime;
             SetScore();
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -59,7 +54,6 @@ public class PlayerController : MonoBehaviour
             {
                 PlayerDied();
             }
-
         }
     }
 
@@ -72,8 +66,8 @@ public class PlayerController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Gem": // Gem과 충돌 시, Player의 점수 증가
-                gemSound.Play();
-                score += 100;
+                viewer.GemSoundPlay();
+                Score += 100;
                 collision.gameObject.SetActive(false);
                 break;
             case "Hurdle": // 장애물과 충돌 시, 체력 감소
@@ -82,12 +76,12 @@ public class PlayerController : MonoBehaviour
                     playerHp -= damage; // 한 오브젝트와 2번 이상 동시 충돌 x
                     clashCount++;
                 }
-                StartCoroutine(PlayerFlash()); // 깜빡이는 코루틴 실행
+                StartCoroutine(viewer.PlayerFlash()); // 깜빡이는 코루틴 실행
                 break;
             case "Item_Hp": // Item_Hp와 충돌 시, Player의 체력 증가
                 playerHp += maxPlayerHp * 0.3f;
                 playerHp = Mathf.Min(playerHp, maxPlayerHp); // 최대체력을 넘어서지 않도록
-                ItemSound.Play();
+                viewer.ItemSoundPlay();
                 collision.gameObject.SetActive(false);
                 break;
         }
@@ -111,24 +105,23 @@ public class PlayerController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "UnderGround": // 바닥과 충돌 시, 2단 점프 카운트 리셋
-                animator.SetBool("isRun", true);
+                viewer.RunAnimation(true);
                 jumpCount = 0;
                 break;
-            case "DeadZone": // 추락하여 DeadZone에 충돌 시, 플레이어 체력 0
-                // playerHp = 0;
+            case "DeadZone": // 추락하여 DeadZone에 충돌 시
                 playerHp -= maxPlayerHp * 0.3f;
-                PlayerFloatUpR = StartCoroutine(PlayerFloatUp());
-                PlayerFlashR = StartCoroutine(PlayerFlash());
-                InvinciblityR = StartCoroutine(Invinciblity());
+                PlayerFloatUpR = StartCoroutine(viewer.PlayerFloatUp());
+                PlayerFlashR = StartCoroutine(viewer.PlayerFlash());
+                InvinciblityR = StartCoroutine(viewer.Invinciblity());
 
                 if (playerHp <= 0)
                 {
                     StopCoroutine(PlayerFloatUpR);
                     StopCoroutine(PlayerFlashR);
-                    StopCoroutine(InvinciblityR); 
+                    StopCoroutine(InvinciblityR);
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4);
-                    spriteRenderer.color = new Color(1, 1, 1, 1);
-                    invinciblityBarrier.SetActive(false);
+                    viewer.SetSpriteColor(1, 1, 1, 1);
+                    viewer.SetinvinciblityBarrier(false);
                 }
                 break;
         }
@@ -143,28 +136,17 @@ public class PlayerController : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "UnderGround":
-                animator.SetBool("isRun", false);
+                viewer.RunAnimation(false);
                 break;
         }
     }
-
-    /// <summary>
-    /// 플레이어의 기본 애니메이션 설정
-    /// </summary>
-    private void PlayerSetAnimation()
-    {
-        animator.SetBool("isGameover", false);
-        animator.SetBool("isStart", true);
-        animator.SetFloat("isJump", rb.velocity.y);
-    }
-
     /// <summary>
     /// 플레이어의 점프 구현
     /// </summary>
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        animator.SetFloat("isJump", rb.velocity.y);
+        viewer.JumpAnimation(rb.velocity.y);
     }
 
     private void CheckJumpCount()
@@ -186,7 +168,7 @@ public class PlayerController : MonoBehaviour
     private void Sliding()
     {
         gameObject.transform.position = new Vector2(gameObject.transform.position.x, -4.05f);
-        animator.SetBool("isSliding", true);
+        viewer.SlidingAnimation(true);
     }
 
     /// <summary>
@@ -195,7 +177,7 @@ public class PlayerController : MonoBehaviour
     private void Standing()
     {
         gameObject.transform.position = new Vector2(gameObject.transform.position.x, -3.96f);
-        animator.SetBool("isSliding", false);
+        viewer.SlidingAnimation(false);
     }
 
     /// <summary>
@@ -203,9 +185,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void PlayerDied()
     {
-        GameManager.instance.isGameover = true;
-        animator.SetBool("isStart", false);
-        animator.SetBool("isGameover", true);
+        GameManager.Instance.IsGameOver = true;
+        viewer.DiedAnimation();
     }
 
     /// <summary>
@@ -215,64 +196,29 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void SetScore()
     {
-        if (score > 45000)
+        if (Score > 45000)
         {
-            animator.SetFloat("DeadSpeed", 0.2f);
+            viewer.SetSpeed(0.2f);
             Time.timeScale = 2f;
             hpReduceSpeed = 2f;
         }
-        else if (score > 20000)
+        else if (Score > 20000)
         {
-            animator.SetFloat("DeadSpeed", 0.4f);
+            viewer.SetSpeed(0.4f);
             Time.timeScale = 1.8f;
             hpReduceSpeed = 1.8f;
         }
-        else if (score > 10000)
+        else if (Score > 10000)
         {
-            animator.SetFloat("DeadSpeed", 0.6f);
+            viewer.SetSpeed(0.6f);
             Time.timeScale = 1.5f;
             hpReduceSpeed = 1.4f;
         }
-        else if (score > 4000)
+        else if (Score > 4000)
         {
-            animator.SetFloat("DeadSpeed", 0.8f);
+            viewer.SetSpeed(0.8f);
             Time.timeScale = 1.2f;
             hpReduceSpeed = 1.2f;
         }
-    }
-    /// <summary>
-    /// 플레이어의 충돌 시 깜빡임을 구현하는 코루틴
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator PlayerFlash()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            spriteRenderer.color = new Color(1, 1, 1, 0);
-            yield return new WaitForSeconds(0.1f);
-            spriteRenderer.color = new Color(1, 1, 1, 1);
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-    /// <summary>
-    /// 바닥 추락 시 위로 올라왔다가 다시 진행하는 코루틴
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator PlayerFloatUp()
-    {
-        gameObject.transform.Translate(0, 5, 0, Space.World);
-        yield return new WaitForSeconds(3f);
-    }
-    /// <summary>
-    /// 플레이어의 무적 상태 코루틴
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator Invinciblity()
-    {
-        this.gameObject.layer = 9;
-        invinciblityBarrier.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        this.gameObject.layer = 3;
-        invinciblityBarrier.SetActive(false);
     }
 }

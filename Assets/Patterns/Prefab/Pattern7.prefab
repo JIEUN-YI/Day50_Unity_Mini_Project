@@ -2446,7 +2446,7 @@ GameObject:
   - component: {fileID: 5876842785873762311}
   - component: {fileID: 5201302280933131742}
   - component: {fileID: 4160230916971260976}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Item_Hp
   m_TagString: Item_Hp
   m_Icon: {fileID: 0}

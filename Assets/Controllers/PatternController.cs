@@ -52,9 +52,9 @@ public class PatternController : MonoBehaviour
     private void Start()
     {
         makingTime = 2.72f;
-        curPlayerHp = playerController.playerHp;
+        curPlayerHp = playerController.PlayerHp;
         maxPlayerHp = curPlayerHp;
-        if (GameManager.instance.isGameover == false)
+        if (GameManager.Instance.IsGameOver == false)
         {
             // 코루틴 시작
             MakePatternRoutin = StartCoroutine(MakePatternR());
@@ -62,7 +62,7 @@ public class PatternController : MonoBehaviour
     }
     private void Update()
     {
-        curPlayerHp = playerController.playerHp;
+        curPlayerHp = playerController.PlayerHp;
         curPlayerHp = Mathf.Min(curPlayerHp, maxPlayerHp);
         checkHp = curPlayerHp / maxPlayerHp;
         if (checkHp >= 0.6f) // 전체 체력의 60프로 이상이 남은 경우
@@ -73,7 +73,7 @@ public class PatternController : MonoBehaviour
         {
             makeNum = 10; // 체력포션 랜덤 발생
         }
-        if (GameManager.instance.isGameover == true) // 게임이 종료된 경우
+        if (GameManager.Instance.IsGameOver == true) // 게임이 종료된 경우
         {
             // 코루틴 종료
             StopCoroutine(MakePatternRoutin);
@@ -83,7 +83,7 @@ public class PatternController : MonoBehaviour
     // 코루틴 제작
     IEnumerator MakePatternR()
     {
-        while (GameManager.instance.isGameover == false)
+        while (GameManager.Instance.IsGameOver == false)
         {
             // 생성할 패턴의 종류를 랜덤으로 선정
             int num = Random.Range(0, makeNum);
@@ -165,6 +165,6 @@ public class PatternController : MonoBehaviour
         patternObj.gameObject.SetActive(true);
         patternPool.RemoveAt(patternPool.Count - 1);
         Pattern pattern = patternObj.GetComponent<Pattern>();
-        pattern.SetSpeed(GameManager.instance.speed);
+        pattern.SetSpeed(GameManager.Instance.Speed);
     }
 }
