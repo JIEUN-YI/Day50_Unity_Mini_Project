@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField] int bestScore; // 최고점수
-    [SerializeField] public float speed; // 패턴, 바닥, 배경의 속도
     public int BestScore { get { return bestScore; } }
+    [SerializeField] public float speed; // 패턴, 바닥, 배경의 속도
 
     // 전역변수 선언
     public bool isGameover = true; // 게임 진행 - false / 게임 종료 - true
