@@ -4785,9 +4785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328514db49fdcf743a9a0517362a754d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestScore: 0
-  speed: 4
-  isGameover: 0
 --- !u!1 &979903078
 GameObject:
   m_ObjectHideFlags: 0
@@ -5759,22 +5756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296c7951f419987479486a09ce47d986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curState: 0
   patternController: {fileID: 9425566}
-  titleText: {fileID: 979903078}
-  startText: {fileID: 313815539}
-  gameoverText: {fileID: 1744699690}
-  restartText: {fileID: 1435780311}
-  scoreText: {fileID: 8588766}
-  playerHpUI: {fileID: 125958151}
-  maxScoreText: {fileID: 2114954486}
-  PauseText: {fileID: 574379276}
-  UnpauseText: {fileID: 744512457}
-  scoreUI: {fileID: 8588768}
-  maxScoreUI: {fileID: 2114954488}
-  playerHpSlider: {fileID: 125958153}
-  curScore: 0
-  curPlayerHp: 0
 --- !u!1 &1187523104
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,6 +6708,7 @@ GameObject:
   - component: {fileID: 1415550313}
   - component: {fileID: 1415550312}
   - component: {fileID: 1415550311}
+  - component: {fileID: 1415550315}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6824,6 +6807,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1415550315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415550310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1b58dcdf93e2147990ef697fe127b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 1149387553}
 --- !u!1 &1422217358
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isStart", false); // 게임시작 전 기본 자세
 
-        if (GameManager.instance.isGameover == false) // 게임 시작 중 - 플레이어의 움직임
+        if (GameManager.Instance.IsGameOver == false) // 게임 시작 중 - 플레이어의 움직임
         {
             playerHp -= hpReduceSpeed * Time.deltaTime;
             score += Time.deltaTime;
@@ -203,7 +203,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void PlayerDied()
     {
-        GameManager.instance.isGameover = true;
+        GameManager.Instance.IsGameOver = true;
         animator.SetBool("isStart", false);
         animator.SetBool("isGameover", true);
     }
