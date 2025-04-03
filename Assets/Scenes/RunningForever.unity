@@ -980,6 +980,7 @@ GameObject:
   - component: {fileID: 166198951}
   - component: {fileID: 166198950}
   - component: {fileID: 166198949}
+  - component: {fileID: 166198954}
   - component: {fileID: 166198948}
   - component: {fileID: 166198953}
   m_Layer: 3
@@ -1001,15 +1002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddc946859bb4b04087fe10a638603a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 166198949}
-  animator: {fileID: 166198953}
-  spriteRenderer: {fileID: 166198951}
-  gemSound: {fileID: 1202047058}
-  ItemSound: {fileID: 765404323}
-  invinciblityBarrier: {fileID: 462892950}
-  playerHp: 100
-  clashCount: 0
-  score: 0
 --- !u!50 &166198949
 Rigidbody2D:
   serializedVersion: 4
@@ -1136,6 +1128,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &166198954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166198947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d01ac3cf8a5eb8428b4136793d90d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemSound: {fileID: 1202047058}
+  itemSound: {fileID: 765404323}
+  invinciblityBarrier: {fileID: 462892950}
 --- !u!1 &181845053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,6 +5764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternController: {fileID: 9425566}
+  playerController: {fileID: 166198948}
 --- !u!1 &1187523104
 GameObject:
   m_ObjectHideFlags: 0
@@ -6819,7 +6827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1b58dcdf93e2147990ef697fe127b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 1149387553}
 --- !u!1 &1422217358
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,12 +6,7 @@ using static GameManager;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject patternController; // PatternController를 활성화 하기 위한 Object 저장
-    private PlayerController playerController;
-
-    private void Awake()
-    {
-        playerController = FindObjectOfType<PlayerController>();
-    }
+    [SerializeField] private PlayerController playerController;
 
     private void Update()
     {
@@ -37,7 +32,7 @@ public class GameController : MonoBehaviour
     private void Ready()
     {
         GameManager.Instance.IsGameOver = true; // GameManager의 isGameover를 게임 종료
-        SetPlayerHp(playerController.playerHp); // PlayerController.cs에서 playerHp를 사용 설정
+        SetPlayerHp(playerController.PlayerHp); // PlayerController.cs에서 playerHp를 사용 설정
 
         if (Input.anyKeyDown) // 아무키나 누르면
         {
@@ -49,8 +44,8 @@ public class GameController : MonoBehaviour
 
     private void Running()
     {
-        GameManager.Instance.CurScore = (int)playerController.score;
-        GameManager.Instance.CurPlayerHp = playerController.playerHp;
+        GameManager.Instance.CurScore = (int)playerController.Score;
+        GameManager.Instance.CurPlayerHp = playerController.PlayerHp;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
